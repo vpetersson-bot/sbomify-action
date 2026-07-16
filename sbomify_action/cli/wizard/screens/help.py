@@ -35,7 +35,8 @@ _HELP_BODY = (
     "  06  Configure (workflow shape)\n"
     "  07  Configure (SBOM content)\n"
     "  08  Review the plan (diff before commit)\n"
-    "  09  Apply — write workflow + finalise components"
+    "  09  Apply — write workflow + finalise components\n"
+    "  10  Publish — generate & upload your first SBOMs (optional)"
 )
 
 # Pinned below the scrolling body so the way *out* of the help sheet is

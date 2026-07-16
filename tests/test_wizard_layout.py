@@ -485,6 +485,11 @@ async def test_whole_wizard_is_completable_by_keyboard_at_80x24(
         await key("enter")  # -> Apply
         await app.workers.wait_for_complete()
         await pilot.pause()
+        await key("enter")  # -> Publish
+        # Publish focuses its primary button, which would spawn a real
+        # pipeline run per matrix row. Skip is the other way off the
+        # screen and the one this layout test cares about reaching.
+        await tab_to("skip")
         await key("enter")  # -> Done
 
     assert trail == [
@@ -496,6 +501,7 @@ async def test_whole_wizard_is_completable_by_keyboard_at_80x24(
         "ConfigureSbomScreen",
         "ReviewScreen",
         "ApplyScreen",
+        "PublishScreen",
         "DoneScreen",
     ], trail
 
@@ -1091,6 +1097,7 @@ def test_progress_crumb_numbering_is_unique_and_ordered() -> None:
     from sbomify_action.cli.wizard.screens.discover import DiscoverScreen
     from sbomify_action.cli.wizard.screens.done import DoneScreen
     from sbomify_action.cli.wizard.screens.product import ProductScreen
+    from sbomify_action.cli.wizard.screens.publish import PublishScreen
     from sbomify_action.cli.wizard.screens.review import ReviewScreen
     from sbomify_action.cli.wizard.screens.welcome import WelcomeScreen
 
@@ -1104,10 +1111,11 @@ def test_progress_crumb_numbering_is_unique_and_ordered() -> None:
         ConfigureSbomScreen,
         ReviewScreen,
         ApplyScreen,
+        PublishScreen,
     ]
     assert [screen.step_index for screen in flow] == list(range(1, TOTAL_STEPS + 1))
-    # Done reports the same (final) step Apply performed, rather than
-    # inventing a tenth.
+    # Done reports the same (final) step Publish performed, rather than
+    # inventing an eleventh.
     assert DoneScreen.step_index == TOTAL_STEPS
 
 

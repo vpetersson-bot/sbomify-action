@@ -18,6 +18,7 @@ import functools
 import logging
 import re
 import threading
+from dataclasses import dataclass
 from pathlib import Path
 
 import requests
@@ -27,6 +28,7 @@ from sbomify_action.cli.wizard.discovery import slugify
 from sbomify_action.cli.wizard.io import WIZARD_HEADER_SENTINEL
 from sbomify_action.cli.wizard.state import (
     CredentialMode,
+    NestedRepoKind,
     Plan,
     PlannedComponent,
     ReleaseStrategy,
@@ -251,27 +253,40 @@ def _format_extension(fmt: SbomFormat) -> str:
     return "cdx.json" if fmt == "cyclonedx" else "spdx.json"
 
 
-def _matrix_block(
+@dataclass(frozen=True)
+class MatrixRow:
+    """One (component, format) row of the emitted workflow's matrix.
+
+    Shared between the YAML emitter and the wizard's Publish step so a
+    local publish run and the CI job agree on component id, lockfile,
+    format, and output filename for every row.
+    """
+
+    name: str
+    component_name: str
+    component_id: str
+    lockfile: str
+    sbom_format: SbomFormat
+    output_file: str
+    # Set when the lockfile lives inside a submodule / vendored repo. Only
+    # the YAML emitter acts on these: a local publish run generates from
+    # the checked-out tree either way, but CI needs the submodule mode and
+    # has to know not to attest another repository's code.
+    submodule_path: str | None = None
+    nested_repo_kind: NestedRepoKind | None = None
+
+
+def matrix_rows(
     components: list[PlannedComponent],
     formats: list[SbomFormat],
     component_ids: dict[str, str],
-    *,
-    attestation: bool = False,
-) -> str:
-    """Render the ``matrix.include:`` rows — one per (component, format).
+) -> list[MatrixRow]:
+    """Compute the matrix rows — one per (component, format).
 
     Row ``name`` is suffixed with the format only when more than one
     format is being emitted, so single-format workflows stay readable.
-
-    When ``attestation`` is enabled every row carries an ``attest``
-    boolean gating the attest-build-provenance step. Lockfiles inside a
-    submodule / vendored repo get ``attest: false``: the attestation's
-    Sigstore identity would be *this* repo's workflow, but the SBOM
-    describes code owned by another repository — signing it here would
-    produce provenance that fails verification against the repo the
-    code actually comes from.
     """
-    rows: list[str] = []
+    rows: list[MatrixRow] = []
     multi_format = len(formats) > 1
     # Track which component-name slugs are reused across lockfiles. When two
     # lockfiles map to the same name (eg the user accepts the same suggested
@@ -296,36 +311,68 @@ def _matrix_block(
             row_slug = name_slug
         for fmt in formats:
             ext = _format_extension(fmt)
-            row_name = f"{row_slug}-{fmt}" if multi_format else row_slug
-            output_file = f"{row_slug}.{ext}"
-            row = (
-                "          - name: " + row_name + "\n"
-                "            component_name: " + c.name + "\n"
-                "            component_id: " + cid + "\n"
-                "            lockfile: " + rel + "\n"
-                "            sbom_format: " + fmt + "\n"
-                "            output_file: " + output_file + "\n"
+            rows.append(
+                MatrixRow(
+                    name=f"{row_slug}-{fmt}" if multi_format else row_slug,
+                    component_name=c.name,
+                    component_id=cid,
+                    lockfile=rel,
+                    sbom_format=fmt,
+                    output_file=f"{row_slug}.{ext}",
+                    submodule_path=c.lockfile.nested_repo,
+                    nested_repo_kind=c.lockfile.nested_repo_kind,
+                )
             )
-            if c.lockfile.nested_repo:
-                # Drives the action's attach-or-backfill submodule mode:
-                # it resolves the pinned commit to a version, attaches the
-                # component's existing SBOM at that version when one
-                # exists, and only generates + uploads otherwise.
-                row += "            submodule_path: " + c.lockfile.nested_repo + "\n"
-            if attestation:
-                if c.lockfile.nested_repo:
-                    kind = "submodule" if c.lockfile.nested_repo_kind == "submodule" else "vendored repo"
-                    row += (
-                        f"            # Deliberately NOT signed: {c.lockfile.nested_repo} is a {kind} — "
-                        "another repository's code. An attestation from this repo's workflow\n"
-                        "            # would carry the wrong Sigstore identity and fail verification "
-                        "against the repository the code actually comes from.\n"
-                        "            attest: false\n"
-                    )
-                else:
-                    row += "            attest: true\n"
-            rows.append(row)
-    return "".join(rows)
+    return rows
+
+
+def _matrix_block(
+    components: list[PlannedComponent],
+    formats: list[SbomFormat],
+    component_ids: dict[str, str],
+    *,
+    attestation: bool = False,
+) -> str:
+    """Render the ``matrix.include:`` rows from :func:`matrix_rows`.
+
+    When ``attestation`` is enabled every row carries an ``attest``
+    boolean gating the attest-build-provenance step. Lockfiles inside a
+    submodule / vendored repo get ``attest: false``: the attestation's
+    Sigstore identity would be *this* repo's workflow, but the SBOM
+    describes code owned by another repository — signing it here would
+    produce provenance that fails verification against the repo the
+    code actually comes from.
+    """
+    blocks: list[str] = []
+    for row in matrix_rows(components, formats, component_ids):
+        block = (
+            "          - name: " + row.name + "\n"
+            "            component_name: " + row.component_name + "\n"
+            "            component_id: " + row.component_id + "\n"
+            "            lockfile: " + row.lockfile + "\n"
+            "            sbom_format: " + row.sbom_format + "\n"
+            "            output_file: " + row.output_file + "\n"
+        )
+        if row.submodule_path:
+            # Drives the action's attach-or-backfill submodule mode:
+            # it resolves the pinned commit to a version, attaches the
+            # component's existing SBOM at that version when one
+            # exists, and only generates + uploads otherwise.
+            block += "            submodule_path: " + row.submodule_path + "\n"
+        if attestation:
+            if row.submodule_path:
+                kind = "submodule" if row.nested_repo_kind == "submodule" else "vendored repo"
+                block += (
+                    f"            # Deliberately NOT signed: {row.submodule_path} is a {kind} — "
+                    "another repository's code. An attestation from this repo's workflow\n"
+                    "            # would carry the wrong Sigstore identity and fail verification "
+                    "against the repository the code actually comes from.\n"
+                    "            attest: false\n"
+                )
+            else:
+                block += "            attest: true\n"
+        blocks.append(block)
+    return "".join(blocks)
 
 
 def _trigger_block(strategy: ReleaseStrategy, branch: str, lockfile_paths: list[str]) -> str:

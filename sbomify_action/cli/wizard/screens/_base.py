@@ -27,7 +27,7 @@ if TYPE_CHECKING:
     from sbomify_action.cli.wizard.app import WizardApp
 
 
-TOTAL_STEPS = 9
+TOTAL_STEPS = 10
 
 # HTTP status markers as ``_build_error`` emits them: ``prefix [NNN]`` at the
 # end of a clause, or ``prefix [NNN] - detail`` when a detail follows. Anchored
