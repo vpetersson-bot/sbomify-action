@@ -14,7 +14,12 @@ from sbomify_action.cli.main import (
     _find_existing_submodule_sbom,
     _prepare_submodule_mode,
 )
-from sbomify_action.submodule import SubmodulePin, _pick_version_tag, resolve_submodule_pin
+from sbomify_action.submodule import (
+    SubmodulePin,
+    _pick_version_tag,
+    _tags_at_sha_remote,
+    resolve_submodule_pin,
+)
 
 # `sbomify_action.cli.main` the *attribute* is shadowed by a function
 # export, so monkeypatch string paths can't reach the module — import it
@@ -226,3 +231,42 @@ def test_find_existing_submodule_sbom_soft_fails(monkeypatch: pytest.MonkeyPatch
 def test_find_existing_submodule_sbom_requires_credentials() -> None:
     config = _submodule_config(token="", component_version="v1.2.3")
     assert _find_existing_submodule_sbom(config, "cyclonedx") is None
+
+
+# ---------------------------------------------------------------------------
+# Option injection via .gitmodules URLs
+# ---------------------------------------------------------------------------
+
+
+def test_remote_tag_lookup_does_not_treat_the_url_as_an_option(tmp_path: Path) -> None:
+    """A .gitmodules URL must never be parsed as a git flag.
+
+    `url` comes from the scanned repository, so it is attacker-controlled
+    whenever that repo is untrusted (a fork PR, third-party code). Without a
+    ``--`` separator git parses a leading-dash value as an option, and
+    ``--upload-pack=<cmd>`` executes <cmd> -- git runs it even while reporting
+    "Could not read from remote repository". This asserts the command is never
+    run rather than asserting on the message, which git is free to reword.
+    """
+    repo = tmp_path / "parent"
+    repo.mkdir()
+    env = {
+        **os.environ,
+        "GIT_CONFIG_GLOBAL": os.devnull,
+        "GIT_CONFIG_SYSTEM": os.devnull,
+        "GIT_AUTHOR_NAME": "T",
+        "GIT_AUTHOR_EMAIL": "t@t",
+        "GIT_COMMITTER_NAME": "T",
+        "GIT_COMMITTER_EMAIL": "t@t",
+    }
+    subprocess.run(["git", "init", "-q", "-b", "main"], cwd=repo, check=True, env=env)
+    subprocess.run(["git", "commit", "-q", "--allow-empty", "-m", "x"], cwd=repo, check=True, env=env)
+    subprocess.run(["git", "remote", "add", "origin", "."], cwd=repo, check=True, env=env)
+
+    canary = tmp_path / "canary"
+    hostile_url = f"--upload-pack=touch {canary}"
+
+    tags = _tags_at_sha_remote(repo, hostile_url, "0" * 40)
+
+    assert tags == []
+    assert not canary.exists(), "a .gitmodules URL was executed as a git option"

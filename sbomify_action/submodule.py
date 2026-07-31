@@ -136,7 +136,14 @@ def _tags_at_sha_remote(repo_root: Path, url: str, sha: str) -> list[str]:
     applies to the remote call. Annotated tags are resolved through
     their peeled (``^{}``) entries, which override the tag-object SHA.
     """
-    out = _run_git(["ls-remote", "--tags", url], cwd=repo_root, timeout=_REMOTE_TIMEOUT)
+    # ``--`` before the URL is load-bearing, not stylistic. ``url`` comes from
+    # the scanned repository's .gitmodules, so it is attacker-controlled whenever
+    # the repo is untrusted (a fork PR, or third-party code). Without the
+    # separator git parses a leading-dash value as an option, and
+    # ``--upload-pack=<cmd>`` executes <cmd> -- verified: it runs even though git
+    # then reports "Could not read from remote repository". With ``--`` the value
+    # is forced to be a remote and git rejects it ("strange hostname ... blocked").
+    out = _run_git(["ls-remote", "--tags", "--", url], cwd=repo_root, timeout=_REMOTE_TIMEOUT)
     if not out:
         return []
     targets: dict[str, str] = {}
