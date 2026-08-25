@@ -16,6 +16,13 @@ set -uo pipefail
 slug=$1; ref=$2; target=${3:-}
 key=$(echo "$slug" | tr '/' '_')
 
+# Resolve sibling scripts relative to this file. The summariser used to be
+# referenced by an absolute /home/ubuntu path, which on any other machine
+# silently failed and recorded `null` for every SBOM -- the runs succeeded,
+# the numbers were simply absent, which is the worst way for a harness to
+# break because nothing looks wrong until analysis.
+HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
 OUT_ROOT=${OUT_ROOT:?}; IMAGE=${IMAGE:?}
 CACHE=${CACHE:-$OUT_ROOT/cache}
 RUN_TIMEOUT=${RUN_TIMEOUT:-900}
@@ -30,7 +37,11 @@ if [ -s "$meta" ]; then echo "SKIP $slug"; exit 0; fi
 
 # Disk guard. A sweep that fills the disk corrupts every record still being
 # written, not just its own, so refuse to start rather than fail halfway.
-avail_gb=$(df -BG --output=avail /home/ubuntu | tail -1 | tr -dc '0-9')
+# Check the filesystem the output actually lands on, not a hardcoded home
+# directory -- the original read /home/ubuntu, which does not exist on a box
+# where the user is not `ubuntu`, and df's error left avail_gb empty so every
+# project aborted with "only G free".
+avail_gb=$(df -BG --output=avail "$OUT_ROOT" | tail -1 | tr -dc '0-9')
 if [ "${avail_gb:-0}" -lt 15 ]; then
   echo "ABORT $slug: only ${avail_gb}G free" >&2; exit 3
 fi
@@ -68,9 +79,26 @@ rm -rf "$outdir"; mkdir -p "$outdir/strict" "$outdir/fallback"
 # kept -- including its known effect of naming the root after the repo -- for
 # the same reason: changing an input would make a diff unattributable to the
 # image. It does mean this run cannot see naming defects.
+# Running the container as the invoking user makes the clone cleanable
+# without sudo, which is the honest fix for the root-ownership leak. It is
+# opt-in and OFF by default because it changes an input: a generator that
+# needs to write into HOME or a cache may behave differently as a non-root
+# user, and a regression sweep cannot afford an unvalidated input change.
+# Prove it produces identical output before turning it on.
+USEROPT=""
+[ "${RUN_AS_HOST_USER:-0}" = "1" ] && USEROPT="--user $(id -u):$(id -g)"
+
+# MEM=none removes the cap entirely. A cap that is too low does not merely
+# slow a project down, it fabricates findings: at 2g every Gradle project
+# died with "Gradle build daemon disappeared unexpectedly", which reads in the
+# results exactly like an architecture defect. The JVM needs far more than the
+# median project, so JVM-heavy work wants a bigger cap or none at all.
+MEMOPT="--memory=$MEM"
+[ "$MEM" = "none" ] && MEMOPT=""
+
 run_action() {
   local fb=$1 dir=$2
-  timeout "$RUN_TIMEOUT" docker run --rm --memory="$MEM" --oom-score-adj=1000 \
+  timeout "$RUN_TIMEOUT" docker run --rm $MEMOPT --oom-score-adj=1000 $USEROPT \
     -v "$repo":/workspace -v "$CACHE":/cache -v "$dir":/out \
     -e HOME=/cache/home -e XDG_CACHE_HOME=/cache/xdg -e SBOMIFY_CACHE_DIR=/cache/enrichment \
     ${fb:+-e SBOMIFY_ALLOW_GENERATOR_FALLBACK=1} \
@@ -92,7 +120,7 @@ dur=$(( $(date +%s) - start ))
 # Reuse the v5 summariser rather than restating what "good" means here.
 summarise() {
   local f=$1
-  if [ -s "$f" ]; then python3 /home/ubuntu/sbomify-eval/inspect_sbom_v2.py "$f" 2>/dev/null || echo 'null'
+  if [ -s "$f" ]; then python3 "$HERE/inspect_sbom_v2.py" "$f" 2>/dev/null || echo 'null'
   else echo 'null'; fi
 }
 strict_sbom=$(summarise "$outdir/strict/sbom.cdx.json")
@@ -111,10 +139,27 @@ grep -qi "INFERRED, NOT RECORDED" "$log" && disclosed=true
 advised=false
 grep -qiE "run \`(swift package resolve|cargo generate-lockfile|composer update|uv lock|npm install|bundle install|mix deps.get)|point LOCK_FILE at it|then commit" "$log" && advised=true
 
+# Bug signals, as opposed to outcomes. A graceful refusal is the product
+# working; an unhandled exception is the product breaking, and the two are
+# indistinguishable by exit code -- both are rc=1. Capture the first
+# traceback's final line, which is the exception type and message, so a sweep
+# can be triaged by defect rather than by return code.
+traceback=false
+crash_line=""
+if grep -q "Traceback (most recent call last)" "$log"; then
+  traceback=true
+  crash_line=$(grep -aE "^[A-Za-z_.]+(Error|Exception|Warning):" "$log" | head -1 | cut -c1-300)
+fi
+# Anything the runtime itself killed: OOM, segfault, a tool that vanished.
+killed=false
+grep -qiE "Killed|Out of memory|Segmentation fault|MemoryError|No space left" "$log" && killed=true
+
 python3 - "$meta" "$slug" "$ref" "$target" "$strict_rc" "$fallback_rc" "$dur" \
-         "$disclosed" "$advised" "$IMAGE" "$strict_sbom" "$fallback_sbom" <<'PY'
+         "$disclosed" "$advised" "$traceback" "$crash_line" "$killed" "$(uname -m)" \
+         "$IMAGE" "$strict_sbom" "$fallback_sbom" <<'PY'
 import json, sys
-(path, slug, ref, target, srx, fbrx, dur, disclosed, advised, image, ss, fs) = sys.argv[1:13]
+(path, slug, ref, target, srx, fbrx, dur, disclosed, advised,
+ tb, crash, killed, arch, image, ss, fs) = sys.argv[1:17]
 def j(s):
     try: return json.loads(s)
     except Exception: return None
@@ -124,6 +169,8 @@ rec = {
     "used_fallback": int(srx) != 0 and int(fbrx) == 0,
     "duration_s": int(dur), "disclosed_inferred": disclosed == "true",
     "recommended_action": advised == "true",
+    "traceback": tb == "true", "crash_line": crash or None,
+    "killed": killed == "true", "arch": arch,
     "image": image, "strict_sbom": j(ss), "fallback_sbom": j(fs),
 }
 with open(path, "w") as fh:
