@@ -1,0 +1,200 @@
+Alamofire/Alamofire	swift	crashed rc=1	Package.swift	
+Baseflow/flutter_cached_network_image	dart	crashed rc=1	cached_network_image/example/android/build.gradle	
+JetBrains/kotlin	kotlin	crashed rc=1	build.gradle.kts	
+ReactiveX/RxJava	java	crashed rc=1	build.gradle	
+ReactiveX/RxSwift	swift	crashed rc=1	Package.swift	
+SDWebImage/SDWebImage	swift	crashed rc=1	Package.swift	
+SwiftyJSON/SwiftyJSON	swift	crashed rc=1	Package.swift	
+airbytehq/airbyte	polyglot	crashed rc=1	build.gradle	
+akka/akka	scala	crashed rc=1	build.sbt	
+androidx/androidx	kotlin	crashed rc=1	build.gradle	
+apache/kafka	java	crashed rc=1	build.gradle	
+apple/swift-argument-parser	swift	crashed rc=1	Package.swift	
+apple/swift-collections	swift	crashed rc=1	Package.swift	
+apple/swift-log	swift	crashed rc=1	Package.swift	
+apple/swift-nio	swift	crashed rc=1	Package.swift	
+apple/swift-package-manager	swift	crashed rc=1	Package.swift	
+arrow-kt/arrow	kotlin	crashed rc=124	build.gradle.kts	714
+cfug/dio	dart	crashed rc=1	example_flutter_app/android/build.gradle.kts	
+dart-lang/http	dart	crashed rc=1	pkgs/cronet_http/android/build.gradle	
+debezium/debezium	java	crashed rc=124	pom.xml	799
+elastic/elasticsearch	java	crashed rc=1	build.gradle	
+firebase/flutterfire	dart	crashed rc=1	packages/cloud_firestore/cloud_firestore/android/build.gradle	
+flutter/packages	dart	crashed rc=1	packages/espresso/android/build.gradle.kts	
+flutter/samples	dart	crashed rc=1	cupertino_gallery/android/build.gradle.kts	
+fmtlib/fmt	cpp	crashed rc=1	support/build.gradle	
+google/dagger	java	crashed rc=1	buildSrc/build.gradle.kts	
+google/ksp	kotlin	crashed rc=1	build.gradle.kts	
+groue/GRDB.swift	swift	crashed rc=1	Package.swift	
+grpc/grpc	cpp	crashed rc=1	Package.swift	
+grpc/grpc-java	polyglot	crashed rc=1	build.gradle	
+haskell/cabal	other	crashed rc=1	stack.yaml	
+http4s/http4s	scala	crashed rc=1	build.sbt	
+junit-team/junit5	java	crashed rc=1	build.gradle.kts	
+kean/Nuke	swift	crashed rc=1	Package.swift	
+mockk/mockk	kotlin	crashed rc=1	build.gradle.kts	
+nlohmann/json	cpp	crashed rc=1	Package.swift	
+nrwl/nx	javascript	crashed rc=1	build.gradle.kts	
+onevcat/Kingfisher	swift	crashed rc=1	Package.swift	
+opensearch-project/OpenSearch	polyglot	crashed rc=1	build.gradle	
+protocolbuffers/protobuf	cpp	crashed rc=1	java/pom.xml	
+react/react-native	javascript	crashed rc=1	build.gradle.kts	
+realm/realm-swift	swift	crashed rc=1	Package.swift	
+softwaremill/tapir	scala	crashed rc=1	build.sbt	
+spring-projects/spring-boot	java	crashed rc=1	build.gradle	
+spring-projects/spring-framework	java	crashed rc=1	build.gradle	
+swiftlang/swift-package-manager	swift	crashed rc=1	Package.swift	
+tensorflow/tensorflow	polyglot	crashed rc=1	tensorflow/lite/java/demo/build.gradle	
+vapor/vapor	swift	crashed rc=1	Package.swift	
+AUTOMATIC1111/stable-diffusion-webui	python	empty document	package.json	0
+App-vNext/Polly	dotnet	empty document	src/Polly.Testing/Polly.Testing.csproj	0
+AutoMapper/AutoMapper	dotnet	empty document	src/Benchmark/Benchmark.csproj	0
+JamesNK/Newtonsoft.Json	dotnet	empty document	Src/Newtonsoft.Json.FuzzTests/Newtonsoft.Json.FuzzTests.csproj	0
+NixOS/nixpkgs	nix	empty document	pkgs/servers/dnschain/package.json	0
+OpenAPITools/openapi-generator	java	empty document	package-lock.json	0
+PHPMailer/PHPMailer	php	empty document	composer.json	0
+Seldaek/monolog	php	empty document	composer.json	0
+abpframework/abp	dotnet	empty document	framework/src/Volo.Abp.ApiVersioning.Abstractions/Volo.Abp.ApiVersioning.Abstractions.csproj	0
+airbnb/lottie-ios	swift	empty document	package.json	0
+apache/spark	scala	empty document	pyproject.toml	0
+bagisto/bagisto	php	empty document	package.json	0
+bcit-ci/CodeIgniter	php	empty document	composer.json	0
+beam-telemetry/telemetry	elixir	empty document	rebar.lock	0
+chartjs/Chart.js	javascript	empty document	composer.json	0
+curl/curl	cpp	empty document	projects/Windows/tmpl/curl.sln	0
+django/django	python	empty document	package.json	0
+dotnet/efcore	dotnet	empty document	src/EFCore.Abstractions/EFCore.Abstractions.csproj	0
+dotnet/orleans	dotnet	empty document	playground/DashboardCohosted/DashboardCohosted.csproj	0
+dotnet/roslyn	dotnet	empty document	src/Deployment/RoslynDeployment.csproj	0
+filamentphp/filament	php	empty document	composer.lock	0
+godotengine/godot	cpp	empty document	pyproject.toml	0
+google/gson	java	empty document	codegen/pom.xml	0
+hasura/graphql-engine	polyglot	empty document	yarn.lock	0
+koalaman/shellcheck	haskell	empty document	stack.yaml	0
+langflow-ai/langflow	python	empty document	package-lock.json	0
+laravel/laravel	php	empty document	package.json	0
+libgit2/libgit2	cpp	empty document	package.json	0
+locustio/locust	python	empty document	package.json	0
+lodash/lodash	javascript	empty document	package-lock.json	0
+lunarmodules/luasocket	lua	empty document	luasocket.sln	0
+microsoft/PowerToys	dotnet	empty document	src/common/Common.Search/Common.Search.csproj	0
+microsoft/markitdown	python	empty document	packages/markitdown-mcp/pyproject.toml	0
+microsoft/terminal	cpp	empty document	tools/ColorTool/ColorTool.sln	0
+nextcloud/server	php	empty document	composer.lock	0
+php-fig/log	php	empty document	composer.json	0
+pypa/pip	python	empty document	pyproject.toml	0
+ray-project/ray	python	empty document	pyproject.toml	0
+reasonml/reason	ocaml	empty document	package.json	0
+restsharp/RestSharp	dotnet	empty document	src/RestSharp.Serializers.Xml/RestSharp.Serializers.Xml.csproj	0
+scikit-learn/scikit-learn	python	empty document	pyproject.toml	0
+snoyberg/conduit	haskell	empty document	stack.yaml.lock	0
+tigerbeetle/tigerbeetle	zig	empty document	src/clients/java/pom.xml	0
+twbs/bootstrap	javascript	empty document	composer.json	0
+yesodweb/yesod	haskell	empty document	stack.yaml.lock	0
+yiisoft/yii2	php	empty document	package.json	0
+ClickHouse/ClickHouse	cpp	no runs		
+EbookFoundation/free-programming-books	other	no runs		
+JuliaData/DataFrames.jl	julia	no runs		
+JuliaGPU/CUDA.jl	julia	no runs		
+JuliaLang/Pkg.jl	julia	no runs		
+JuliaLang/julia	other	no runs		
+JuliaPlots/Plots.jl	julia	no runs		
+JuliaSymbolics/Symbolics.jl	julia	no runs		
+JuliaWeb/HTTP.jl	julia	no runs		
+LuaJIT/LuaJIT	other	no runs		
+LuaLS/lua-language-server	lua	no runs		
+NixOS/nix	nix	no runs		
+PMunch/futhark	nim	no runs		
+Perl/perl5	other	no runs		
+SciML/DifferentialEquations.jl	julia	no runs		
+Shopify/liquid	ruby	no runs		
+abseil/abseil-cpp	cpp	no runs		
+anthropics/claude-code	javascript	no runs		
+benoitc/hackney	erlang	no runs		
+catchorg/Catch2	cpp	no runs		
+cloudposse/terraform-aws-components	terraform	no runs		
+conan-io/conan-center-index	cpp	no runs		
+crystal-lang/crystal	other	no runs		
+dart-lang/sdk	dart	no runs		
+dart-lang/shelf	dart	no runs		
+daurnimator/lua-http	lua	no runs		
+disruptek/frosty	nim	no runs		
+duckdb/duckdb	cpp	no runs		
+elixir-lang/elixir	elixir	no runs		
+facebook/folly	cpp	no runs		
+folke/lazy.nvim	lua	no runs		
+gabime/spdlog	cpp	no runs		
+google/googletest	cpp	no runs		
+haskell/aeson	haskell	no runs		
+haskellari/postgresql-simple	haskell	no runs		
+hexops/mach	zig	no runs		
+houseabsolute/DateTime.pm	perl	no runs		
+janestreet/core	ocaml	no runs		
+jekyll/jekyll	ruby	no runs		
+karlseguin/http.zig	zig	no runs		
+kristoff-it/zine	zig	no runs		
+libwww-perl/libwww-perl	perl	no runs		
+lunarmodules/busted	lua	no runs		
+luvit/luvit	lua	no runs		
+metacpan/metacpan-web	perl	no runs		
+mirage/mirage	ocaml	no runs		
+mojolicious/mojo	perl	no runs		
+moose/Moose	perl	no runs		
+natecraddock/ziglua	zig	no runs		
+neovim/neovim	other	no runs		
+nginx/nginx	cpp	no runs		
+nim-lang/Nim	nim	no runs		
+nimgl/nimgl	nim	no runs		
+ninenines/cowboy	erlang	no runs		
+nix-community/home-manager	nix	no runs		
+nix-community/nixvim	nix	no runs		
+numtide/devshell	nix	no runs		
+nvim-lua/kickstart.nvim	lua	no runs		
+ocaml-batteries-team/batteries-included	ocaml	no runs		
+ocaml-multicore/eio	ocaml	no runs		
+ocaml/ocaml	other	no runs		
+ocaml/opam	ocaml	no runs		
+ocsigen/lwt	ocaml	no runs		
+openresty/lua-nginx-module	perl	no runs		
+openssl/openssl	cpp	no runs		
+perl5-dbi/dbi	perl	no runs		
+plack/Plack	perl	no runs		
+puma/puma	ruby	no runs		
+r-lib/devtools	r	no runs		
+r-lib/httr2	r	no runs		
+r-lib/testthat	r	no runs		
+rack/rack	ruby	no runs		
+rspec/rspec-core	ruby	no runs		
+rstudio/renv	r	no runs		
+rubocop/rubocop	ruby	no runs		
+ruby-grape/grape	ruby	no runs		
+sass/sassc-ruby	ruby	no runs		
+sidekiq/sidekiq	ruby	no runs		
+sinatra/sinatra	ruby	no runs		
+sindresorhus/awesome	other	no runs		
+solidusio/solidus	ruby	no runs		
+terraform-aws-modules/terraform-aws-eks	terraform	no runs		
+terraform-aws-modules/terraform-aws-rds	terraform	no runs		
+terraform-aws-modules/terraform-aws-s3-bucket	terraform	no runs		
+terraform-aws-modules/terraform-aws-security-group	terraform	no runs		
+terraform-aws-modules/terraform-aws-vpc	terraform	no runs		
+tidyverse/dplyr	r	no runs		
+tidyverse/ggplot2	r	no runs		
+tidyverse/tidyr	r	no runs		
+treeform/pixie	nim	no runs		
+ytdl-org/youtube-dl	python	no runs		
+ziglang/zig	other	no runs		
+zigtools/zls	zig	no runs		
+zigzap/zap	zig	no runs		
+FluxML/Flux.jl	julia	tooling subject	examples/resnet_tinyimagenet/pytorch/pyproject.toml	63
+GoogleCloudPlatform/terraform-google-network	terraform	tooling subject	test/integration/go.sum	1
+capistrano/capistrano	ruby	tooling subject	docs/Gemfile.lock	84
+emqx/emqx	erlang	tooling subject	scripts/sbom/requirements.txt	12
+flame-engine/flame	dart	tooling subject	doc/_sphinx/requirements.txt	10
+microsoft/vcpkg	cpp	tooling subject	scripts/azure-pipelines/owners-db/package-lock.json	20
+ocaml/dune	ocaml	tooling subject	doc/requirements.txt	5
+ohmyzsh/ohmyzsh	other	tooling subject	.github/workflows/dependencies/requirements.txt	7
+status-im/nimbus-eth2	nim	tooling subject	docs/requirements.txt	34
+terraform-google-modules/terraform-google-kubernetes-engine	terraform	tooling subject	test/integration/go.sum	47
+zedeus/nitter	nim	tooling subject	tests/poetry.lock	80
+Genymobile/scrcpy	cpp	inferred versions	build.gradle	206

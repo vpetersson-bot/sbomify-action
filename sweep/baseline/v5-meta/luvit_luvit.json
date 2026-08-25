@@ -1,0 +1,1 @@
+{"ecosystem": "lua", "slug": "luvit/luvit", "note": "rockspec", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "2.18.1", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 3, "discovered": [], "target_lockfile": null, "sbom": {}}

@@ -1,0 +1,1 @@
+{"ecosystem": "other", "slug": "ziglang/zig", "note": "zig-unsupported", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "0.15.2", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 13, "repo_mb": 308, "discovered": [], "target_lockfile": null, "sbom": {}}

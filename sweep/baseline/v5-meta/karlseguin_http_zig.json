@@ -1,0 +1,1 @@
+{"ecosystem": "zig", "slug": "karlseguin/http.zig", "note": "build.zig.zon", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "@default", "released": false, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 8, "repo_mb": 1, "discovered": [], "target_lockfile": null, "sbom": {}}

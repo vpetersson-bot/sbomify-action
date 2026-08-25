@@ -1,0 +1,1 @@
+{"ecosystem": "cpp", "slug": "duckdb/duckdb", "note": "cmake, vendored", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v1.5.5", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 18, "repo_mb": 391, "discovered": [], "target_lockfile": null, "sbom": {}}

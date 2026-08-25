@@ -1,0 +1,1 @@
+{"ecosystem": "nix", "slug": "NixOS/nix", "note": "the package manager", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "2.35.1", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 23, "discovered": [], "target_lockfile": null, "sbom": {}}

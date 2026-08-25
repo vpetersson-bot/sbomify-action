@@ -1,0 +1,1 @@
+{"ecosystem": "zig", "slug": "zigzap/zap", "note": "build.zig.zon, http", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v0.11.0", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 5, "repo_mb": 7, "discovered": [], "target_lockfile": null, "sbom": {}}

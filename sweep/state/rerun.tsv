@@ -1,0 +1,17 @@
+dotnet	App-vNext/Polly	https://github.com/App-vNext/Polly.git	csproj	8.7.0
+dotnet	AutoMapper/AutoMapper	https://github.com/AutoMapper/AutoMapper.git	csproj	v16.2.0
+ruby	Homebrew/brew	https://github.com/Homebrew/brew.git	gemfile	6.0.15
+kotlin	InsertKoinIO/koin	https://github.com/InsertKoinIO/koin.git	gradle	4.2.2
+lua	Kong/kong	https://github.com/Kong/kong.git	rockspec, real app	3.9.3
+dotnet	abpframework/abp	https://github.com/abpframework/abp.git	csproj-monorepo	10.6.0
+polyglot	apache/arrow	https://github.com/apache/arrow.git	many languages in one tree	@default
+polyglot	apache/superset	https://github.com/apache/superset.git	python+js	v2021.41.0
+cpp	curl/curl	https://github.com/curl/curl.git	autotools-nolock	curl-8_21_0
+dotnet	dotnet/efcore	https://github.com/dotnet/efcore.git	csproj	v11.0.100
+dotnet	dotnet/orleans	https://github.com/dotnet/orleans.git	framework monorepo	v10.2.2
+dart	felangel/bloc	https://github.com/felangel/bloc.git	pubspec-monorepo	bloc-v9.2.1
+dart	firebase/flutterfire	https://github.com/firebase/flutterfire.git	monorepo	@default
+javascript	firecrawl/firecrawl	https://github.com/firecrawl/firecrawl.git	top-100, pnpm monorepo	v2.11.193
+dotnet	microsoft/PowerToys	https://github.com/microsoft/PowerToys.git	top-100, csproj + C++	v0.101.2211.0
+dotnet	restsharp/RestSharp	https://github.com/restsharp/RestSharp.git	csproj	114.0.0
+ruby	rubygems/rubygems	https://github.com/rubygems/rubygems.git	gemfile	v4.0.18

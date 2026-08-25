@@ -1,0 +1,1 @@
+{"ecosystem": "haskell", "slug": "haskellari/postgresql-simple", "note": "cabal", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v0.7.0.1", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 1, "discovered": [], "target_lockfile": null, "sbom": {}}

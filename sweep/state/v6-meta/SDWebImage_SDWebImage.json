@@ -1,0 +1,1 @@
+{"slug": "SDWebImage/SDWebImage", "ref": "5.21.7", "target_lockfile": "Package.swift", "strict_rc": 1, "fallback_rc": 1, "used_fallback": false, "duration_s": 15, "disclosed_inferred": false, "recommended_action": true, "image": "sbomifyhub/sbomify-action@sha256:042ba7e9325256551af8ec8e0f96588df3dde2e97dcbaf997640217a02ea2e41", "strict_sbom": null, "fallback_sbom": null}

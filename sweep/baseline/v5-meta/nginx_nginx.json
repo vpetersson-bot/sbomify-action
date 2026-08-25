@@ -1,0 +1,1 @@
+{"ecosystem": "cpp", "slug": "nginx/nginx", "note": "autotools", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "release-1.31.3", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 8, "repo_mb": 11, "discovered": [], "target_lockfile": null, "sbom": {}}

@@ -1,0 +1,1 @@
+{"ecosystem": "dart", "slug": "dart-lang/sdk", "note": "pubspec", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "3.12.2", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 21, "repo_mb": 498, "discovered": [], "target_lockfile": null, "sbom": {}}

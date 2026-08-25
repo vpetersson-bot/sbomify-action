@@ -1,0 +1,1 @@
+{"ecosystem": "ruby", "slug": "rubocop/rubocop", "note": "gemfile", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v1.89.0", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 5, "repo_mb": 24, "discovered": [], "target_lockfile": null, "sbom": {}}

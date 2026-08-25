@@ -1,0 +1,1 @@
+{"slug": "airbytehq/airbyte", "ref": "v2.0.0", "target_lockfile": "build.gradle", "strict_rc": 1, "fallback_rc": 124, "used_fallback": false, "duration_s": 3127, "disclosed_inferred": false, "recommended_action": false, "image": "sbomifyhub/sbomify-action@sha256:042ba7e9325256551af8ec8e0f96588df3dde2e97dcbaf997640217a02ea2e41", "strict_sbom": null, "fallback_sbom": null}

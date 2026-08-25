@@ -1,0 +1,1 @@
+{"ecosystem": "ruby", "slug": "rack/rack", "note": "gemspec-nolock", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v3.2.6", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 10, "discovered": [], "target_lockfile": null, "sbom": {}}

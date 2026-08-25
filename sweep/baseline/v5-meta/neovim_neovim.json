@@ -1,0 +1,1 @@
+{"ecosystem": "other", "slug": "neovim/neovim", "note": "lua-c", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v0.12.4", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 15, "repo_mb": 81, "discovered": [], "target_lockfile": null, "sbom": {}}

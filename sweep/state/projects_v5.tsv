@@ -1,0 +1,500 @@
+javascript	facebook/react	https://github.com/facebook/react.git	yarn.lock	v19.2.8
+python	psf/requests	https://github.com/psf/requests.git	pep621-setuptools	v2.34.2
+go	kubernetes/kubernetes	https://github.com/kubernetes/kubernetes.git	huge-gomod	v1.36.3
+dotnet	dotnet/runtime	https://github.com/dotnet/runtime.git	huge	v10.0.10
+rust	rust-lang/rust	https://github.com/rust-lang/rust.git	huge-cargo	1.97.1
+cpp	curl/curl	https://github.com/curl/curl.git	autotools-nolock	curl-8_21_0
+ruby	rails/rails	https://github.com/rails/rails.git	gemfile.lock	v8.1.3.1
+java	spring-projects/spring-boot	https://github.com/spring-projects/spring-boot.git	gradle	v4.1.0
+php	laravel/framework	https://github.com/laravel/framework.git	composer-nolock	v13.24.0
+docker	nginx:latest	nginx:latest	container	@default
+polyglot	supabase/supabase	https://github.com/supabase/supabase.git	pnpm-monorepo	v1.26.08
+swift	Alamofire/Alamofire	https://github.com/Alamofire/Alamofire.git	spm	5.12.0
+dart	flutter/flutter	https://github.com/flutter/flutter.git	pubspec-huge	3.44.9
+elixir	elixir-lang/elixir	https://github.com/elixir-lang/elixir.git	mix-nolock	v1.20.3
+other	haskell/cabal	https://github.com/haskell/cabal.git	haskell-unsupported	Cabal-v3.18.1.0
+kotlin	InsertKoinIO/koin	https://github.com/InsertKoinIO/koin.git	gradle	4.2.2
+terraform	terraform-aws-modules/terraform-aws-vpc	https://github.com/terraform-aws-modules/terraform-aws-vpc.git	hcl	v6.6.1
+haskell	PostgREST/postgrest	https://github.com/PostgREST/postgrest.git	cabal, real app	v16.0
+zig	ghostty-org/ghostty	https://github.com/ghostty-org/ghostty.git	build.zig.zon, terminal	v1.3.1
+erlang	benoitc/hackney	https://github.com/benoitc/hackney.git	rebar.lock	4.7.2
+julia	FluxML/Flux.jl	https://github.com/FluxML/Flux.jl.git	Project.toml	v0.16.11
+lua	Kong/kong	https://github.com/Kong/kong.git	rockspec, real app	3.9.3
+nim	PMunch/futhark	https://github.com/PMunch/futhark.git	nimble	v0.16.0
+scala	apache/spark	https://github.com/apache/spark.git	maven+sbt	v4.2.0
+nix	Mic92/sops-nix	https://github.com/Mic92/sops-nix.git	flake.lock	@default
+ocaml	janestreet/core	https://github.com/janestreet/core.git	dune	113.33.03
+perl	houseabsolute/DateTime.pm	https://github.com/houseabsolute/DateTime.pm.git	cpanfile	v1.66
+r	r-lib/devtools	https://github.com/r-lib/devtools.git	DESCRIPTION	v2.5.2
+javascript	vuejs/core	https://github.com/vuejs/core.git	pnpm-lock	v3.5.41
+python	pallets/flask	https://github.com/pallets/flask.git	flit	3.1.3
+go	moby/moby	https://github.com/moby/moby.git	gomod	v28.5.2
+clojure	babashka/babashka	https://github.com/babashka/babashka.git	deps.edn + graalvm	v1.13.219
+dotnet	dotnet/aspnetcore	https://github.com/dotnet/aspnetcore.git	huge	v10.0.10
+rust	denoland/deno	https://github.com/denoland/deno.git	cargo	v2.9.5
+cpp	openssl/openssl	https://github.com/openssl/openssl.git	perl-build	openssl-4.0.1
+ruby	jekyll/jekyll	https://github.com/jekyll/jekyll.git	gemspec	v4.4.1
+php	symfony/symfony	https://github.com/symfony/symfony.git	composer	v8.1.4
+docker	python:3.12-slim	python:3.12-slim	container	@default
+polyglot	n8n-io/n8n	https://github.com/n8n-io/n8n.git	pnpm-monorepo	n8n@2.34.4
+java	spring-projects/spring-framework	https://github.com/spring-projects/spring-framework.git	gradle	v7.0.8
+swift	apple/swift-nio	https://github.com/apple/swift-nio.git	spm	2.101.3
+dart	dart-lang/sdk	https://github.com/dart-lang/sdk.git	pubspec	3.12.2
+elixir	phoenixframework/phoenix	https://github.com/phoenixframework/phoenix.git	mix.lock	v1.8.9
+other	commercialhaskell/stack	https://github.com/commercialhaskell/stack.git	haskell-unsupported	v3.11.1
+terraform	terraform-aws-modules/terraform-aws-eks	https://github.com/terraform-aws-modules/terraform-aws-eks.git	hcl	v21.24.2
+haskell	haskell-servant/servant	https://github.com/haskell-servant/servant.git	cabal monorepo	servant-0.20.3.0
+zig	hexops/mach	https://github.com/hexops/mach.git	build.zig.zon, game engine	v0.5.0
+kotlin	JetBrains/kotlin	https://github.com/JetBrains/kotlin.git	gradle, enormous	v2.4.10
+erlang	emqx/emqx	https://github.com/emqx/emqx.git	rebar.lock	6.2.2
+julia	JuliaData/DataFrames.jl	https://github.com/JuliaData/DataFrames.jl.git	Project.toml	v1.8.2
+lua	LuaLS/lua-language-server	https://github.com/LuaLS/lua-language-server.git	lua + rockspec	3.19.0
+nim	disruptek/frosty	https://github.com/disruptek/frosty.git	nimble small	3.0.0
+nix	NixOS/nix	https://github.com/NixOS/nix.git	the package manager	2.35.1
+ocaml	mirage/mirage	https://github.com/mirage/mirage.git	opam	v4.11.2
+perl	libwww-perl/libwww-perl	https://github.com/libwww-perl/libwww-perl.git	no lock	v6.83
+scala	scala/scala	https://github.com/scala/scala.git	sbt	v2.13.18
+r	r-lib/httr2	https://github.com/r-lib/httr2.git	DESCRIPTION	v1.3.0
+javascript	angular/angular	https://github.com/angular/angular.git	yarn+bazel	v22.1.1
+python	django/django	https://github.com/django/django.git	setuptools	6.1
+go	hashicorp/terraform	https://github.com/hashicorp/terraform.git	gomod	v1.15.8
+dotnet	AutoMapper/AutoMapper	https://github.com/AutoMapper/AutoMapper.git	csproj	v16.2.0
+rust	astral-sh/uv	https://github.com/astral-sh/uv.git	cargo-workspace	0.12.3
+cpp	protocolbuffers/protobuf	https://github.com/protocolbuffers/protobuf.git	bazel+cmake	v35.1
+clojure	clj-kondo/clj-kondo	https://github.com/clj-kondo/clj-kondo.git	deps.edn + graalvm	v2026.08.04
+ruby	discourse/discourse	https://github.com/discourse/discourse.git	gemfile+yarn	v2026.7.1
+php	composer/composer	https://github.com/composer/composer.git	composer.lock	2.10.2
+docker	node:22-alpine	node:22-alpine	container	@default
+polyglot	appwrite/appwrite	https://github.com/appwrite/appwrite.git	php+ts	1.9.6
+swift	vapor/vapor	https://github.com/vapor/vapor.git	spm	4.122.0
+dart	felangel/bloc	https://github.com/felangel/bloc.git	pubspec-monorepo	bloc-v9.2.1
+elixir	absinthe-graphql/absinthe	https://github.com/absinthe-graphql/absinthe.git	mix.lock	v1.11.0
+java	elastic/elasticsearch	https://github.com/elastic/elasticsearch.git	gradle-huge	v9.5.0
+other	neovim/neovim	https://github.com/neovim/neovim.git	lua-c	v0.12.4
+terraform	cloudposse/terraform-aws-components	https://github.com/cloudposse/terraform-aws-components.git	hcl	1.536.0
+haskell	haskell/aeson	https://github.com/haskell/aeson.git	cabal, json	v2.3.1.0
+zig	karlseguin/http.zig	https://github.com/karlseguin/http.zig.git	build.zig.zon	@default
+erlang	erlang/rebar3	https://github.com/erlang/rebar3.git	rebar.lock	3.27.0
+julia	JuliaGPU/CUDA.jl	https://github.com/JuliaGPU/CUDA.jl.git	Project.toml	v6.2.1
+lua	daurnimator/lua-http	https://github.com/daurnimator/lua-http.git	rockspec	v0.4
+kotlin	Kotlin/kotlinx.coroutines	https://github.com/Kotlin/kotlinx.coroutines.git	gradle	1.11.0
+nim	nim-lang/Nim	https://github.com/nim-lang/Nim.git	nimble	v2.2.10
+nix	NixOS/nixpkgs	https://github.com/NixOS/nixpkgs.git	flake.nix, enormous	v208
+ocaml	ocaml-batteries-team/batteries-included	https://github.com/ocaml-batteries-team/batteries-included.git	opam	release-09.11.1
+perl	metacpan/metacpan-web	https://github.com/metacpan/metacpan-web.git	cpanfile + snapshot	v1.0.0
+r	r-lib/testthat	https://github.com/r-lib/testthat.git	DESCRIPTION	v3.3.2
+javascript	sveltejs/svelte	https://github.com/sveltejs/svelte.git	pnpm-lock	svelte@5.56.8
+python	encode/httpx	https://github.com/encode/httpx.git	hatch	0.28.1
+scala	akka/akka	https://github.com/akka/akka.git	sbt	v10.1.0
+go	grafana/grafana	https://github.com/grafana/grafana.git	go+js	v13.1.3
+dotnet	JamesNK/Newtonsoft.Json	https://github.com/JamesNK/Newtonsoft.Json.git	csproj	13.0.4
+rust	astral-sh/ruff	https://github.com/astral-sh/ruff.git	cargo-workspace	0.16.2
+cpp	opencv/opencv	https://github.com/opencv/opencv.git	cmake	5.0.0
+ruby	fastlane/fastlane	https://github.com/fastlane/fastlane.git	gemfile	2.237.0
+php	guzzle/guzzle	https://github.com/guzzle/guzzle.git	composer	8.0.2
+docker	redis:7-alpine	redis:7-alpine	container	@default
+clojure	clojure/clojure	https://github.com/clojure/clojure.git	maven pom	clojure-1.12.5
+polyglot	hashicorp/vault	https://github.com/hashicorp/vault.git	go+ember	v2.0.4
+swift	SwiftyJSON/SwiftyJSON	https://github.com/SwiftyJSON/SwiftyJSON.git	spm	5.0.2
+dart	flutter/packages	https://github.com/flutter/packages.git	pubspec-monorepo	@default
+elixir	elixir-ecto/ecto	https://github.com/elixir-ecto/ecto.git	mix.lock	v3.14.1
+other	LuaJIT/LuaJIT	https://github.com/LuaJIT/LuaJIT.git	lua-unsupported	@default
+terraform	terraform-aws-modules/terraform-aws-rds	https://github.com/terraform-aws-modules/terraform-aws-rds.git	hcl	v7.2.1
+haskell	haskell/haskell-language-server	https://github.com/haskell/haskell-language-server.git	cabal, large	2.14.0.0
+java	apache/kafka	https://github.com/apache/kafka.git	gradle	4.3.1
+zig	kristoff-it/zine	https://github.com/kristoff-it/zine.git	build.zig.zon	v0.13.0
+erlang	erlware/relx	https://github.com/erlware/relx.git	rebar.lock	v4.10.0
+julia	JuliaLang/Pkg.jl	https://github.com/JuliaLang/Pkg.jl.git	Project.toml/Manifest.toml	v1.12.6
+lua	folke/lazy.nvim	https://github.com/folke/lazy.nvim.git	plugin manager, no manifest	v11.17.5
+nim	nim-lang/nimble	https://github.com/nim-lang/nimble.git	nimble itself	v0.24.1
+nix	cachix/devenv	https://github.com/cachix/devenv.git	flake.lock + rust	v2.2.1
+ocaml	ocaml-multicore/eio	https://github.com/ocaml-multicore/eio.git	dune	v1.4
+kotlin	Kotlin/kotlinx.serialization	https://github.com/Kotlin/kotlinx.serialization.git	gradle	v1.11.0
+perl	mojolicious/mojo	https://github.com/mojolicious/mojo.git	cpanfile	v9.49
+r	rstudio/renv	https://github.com/rstudio/renv.git	renv.lock, the R lockfile	v1.2.4
+javascript	vercel/next.js	https://github.com/vercel/next.js.git	pnpm-monorepo	v16.3.0
+python	pydantic/pydantic	https://github.com/pydantic/pydantic.git	hatch+uv	v2.13.4
+go	prometheus/prometheus	https://github.com/prometheus/prometheus.git	go+js	v3.13.2
+dotnet	dotnet/efcore	https://github.com/dotnet/efcore.git	csproj	v11.0.100
+rust	BurntSushi/ripgrep	https://github.com/BurntSushi/ripgrep.git	cargo	15.2.0
+scala	playframework/playframework	https://github.com/playframework/playframework.git	sbt	3.0.11
+cpp	nlohmann/json	https://github.com/nlohmann/json.git	cmake+meson	v3.12.0
+ruby	Homebrew/brew	https://github.com/Homebrew/brew.git	gemfile	6.0.15
+php	sebastianbergmann/phpunit	https://github.com/sebastianbergmann/phpunit.git	composer	13.3.0
+docker	postgres:17-alpine	postgres:17-alpine	container	@default
+polyglot	apache/superset	https://github.com/apache/superset.git	python+js	v2021.41.0
+swift	pointfreeco/swift-composable-architecture	https://github.com/pointfreeco/swift-composable-architecture.git	spm-resolved	1.26.1
+dart	rrousselGit/riverpod	https://github.com/rrousselGit/riverpod.git	pubspec-monorepo	riverpod-v3.4.2
+clojure	clojure/tools.deps	https://github.com/clojure/tools.deps.git	deps.edn	v0.31.1642
+elixir	oban-bg/oban	https://github.com/oban-bg/oban.git	mix.lock	v2.23.1
+other	Perl/perl5	https://github.com/Perl/perl5.git	perl-unsupported	v5.45.1
+terraform	GoogleCloudPlatform/terraform-google-network	https://github.com/terraform-google-modules/terraform-google-network.git	hcl	v18.1.2
+haskell	haskellari/postgresql-simple	https://github.com/haskellari/postgresql-simple.git	cabal	v0.7.0.1
+zig	natecraddock/ziglua	https://github.com/natecraddock/ziglua.git	build.zig.zon	0.6.0
+erlang	inaka/elvis	https://github.com/inaka/elvis.git	rebar.lock	5.0.4
+julia	JuliaPlots/Plots.jl	https://github.com/JuliaPlots/Plots.jl.git	Project.toml	v1.41.4
+java	apache/lucene	https://github.com/apache/lucene.git	gradle	releases/lucene/10.5.0
+lua	lunarmodules/busted	https://github.com/lunarmodules/busted.git	rockspec	v2.3.0
+nim	nimgl/nimgl	https://github.com/nimgl/nimgl.git	nimble	1.3.2
+nix	nix-community/home-manager	https://github.com/nix-community/home-manager.git	flake.lock	@default
+ocaml	ocaml/dune	https://github.com/ocaml/dune.git	dune-project	3.24.2
+perl	moose/Moose	https://github.com/moose/Moose.git	cpanfile	2.4000
+r	rstudio/shiny	https://github.com/rstudio/shiny.git	DESCRIPTION + renv	v1.14.0
+javascript	expressjs/express	https://github.com/expressjs/express.git	package.json-only	v5.2.1
+kotlin	androidx/androidx	https://github.com/androidx/androidx.git	gradle, enormous	@default
+python	psf/black	https://github.com/psf/black.git	hatch	26.5.1
+go	gin-gonic/gin	https://github.com/gin-gonic/gin.git	gomod	v1.12.0
+dotnet	serilog/serilog	https://github.com/serilog/serilog.git	csproj	v2234
+rust	sharkdp/bat	https://github.com/sharkdp/bat.git	cargo	v0.26.1
+cpp	fmtlib/fmt	https://github.com/fmtlib/fmt.git	cmake	12.2.0
+ruby	rubocop/rubocop	https://github.com/rubocop/rubocop.git	gemfile	v1.89.0
+php	Seldaek/monolog	https://github.com/Seldaek/monolog.git	composer	3.10.0
+scala	zio/zio	https://github.com/zio/zio.git	sbt	v2.1.26
+docker	golang:1.23	golang:1.23	container	@default
+polyglot	go-gitea/gitea	https://github.com/go-gitea/gitea.git	go+npm	v1.27.1
+swift	realm/realm-swift	https://github.com/realm/realm-swift.git	spm+cocoapods	v20.0.5
+dart	localsend/localsend	https://github.com/localsend/localsend.git	pubspec.lock	v1.17.0
+elixir	plausible/analytics	https://github.com/plausible/analytics.git	mix+npm	v3.2.1
+other	JuliaLang/julia	https://github.com/JuliaLang/julia.git	julia-unsupported	v1.12.6
+terraform	terraform-aws-modules/terraform-aws-s3-bucket	https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git	hcl	v5.15.4
+clojure	metabase/metabase	https://github.com/metabase/metabase.git	deps.edn, large app	v1.52.2.5
+haskell	jgm/pandoc	https://github.com/jgm/pandoc.git	cabal, widely used	3.10.1
+zig	oven-sh/bun	https://github.com/oven-sh/bun.git	build.zig.zon + package.json	bun-v1.3.14
+erlang	ninenines/cowboy	https://github.com/ninenines/cowboy.git	rebar.lock	2.18.0
+julia	JuliaSymbolics/Symbolics.jl	https://github.com/JuliaSymbolics/Symbolics.jl.git	Project.toml	v7.36.0
+lua	lunarmodules/luasocket	https://github.com/lunarmodules/luasocket.git	rockspec	v3.1.0
+nim	status-im/nimbus-eth2	https://github.com/status-im/nimbus-eth2.git	nimble, large	v26.7.0
+nix	nix-community/naersk	https://github.com/nix-community/naersk.git	flake.lock + rust	@default
+java	google/guava	https://github.com/google/guava.git	maven	v33.6.0
+ocaml	ocaml/opam	https://github.com/ocaml/opam.git	opam itself	2.5.2
+perl	openresty/lua-nginx-module	https://github.com/openresty/lua-nginx-module.git	mixed lua/perl tests	v0.10.31
+r	tidyverse/dplyr	https://github.com/tidyverse/dplyr.git	DESCRIPTION	v1.2.1
+javascript	nestjs/nest	https://github.com/nestjs/nest.git	pnpm	v11.1.29
+python	fastapi/fastapi	https://github.com/fastapi/fastapi.git	pdm	0.141.1
+go	gohugoio/hugo	https://github.com/gohugoio/hugo.git	gomod	v0.164.0
+dotnet	abpframework/abp	https://github.com/abpframework/abp.git	csproj-monorepo	10.6.0
+kotlin	arrow-kt/arrow	https://github.com/arrow-kt/arrow.git	gradle	2.2.3
+rust	sharkdp/fd	https://github.com/sharkdp/fd.git	cargo	v10.4.2
+cpp	google/googletest	https://github.com/google/googletest.git	bazel+cmake	v1.17.0
+ruby	sidekiq/sidekiq	https://github.com/sidekiq/sidekiq.git	gemfile	v8.1.6
+php	nextcloud/server	https://github.com/nextcloud/server.git	composer+npm	v34.0.2
+docker	eclipse-temurin:21-jre	eclipse-temurin:21-jre	container	@default
+polyglot	immich-app/immich	https://github.com/immich-app/immich.git	ts+dart	v3.1.0
+swift	apple/swift-package-manager	https://github.com/swiftlang/swift-package-manager.git	spm	0.6.0
+scala	softwaremill/tapir	https://github.com/softwaremill/tapir.git	sbt	v1.13.31
+dart	dart-lang/http	https://github.com/dart-lang/http.git	pubspec	http-v1.5.0
+elixir	elixir-nx/nx	https://github.com/elixir-nx/nx.git	mix	v0.13.0
+other	crystal-lang/crystal	https://github.com/crystal-lang/crystal.git	shard.lock	1.21.0
+terraform	terraform-aws-modules/terraform-aws-security-group	https://github.com/terraform-aws-modules/terraform-aws-security-group.git	hcl	v6.0.0
+haskell	koalaman/shellcheck	https://github.com/koalaman/shellcheck.git	cabal	v0.11.0
+zig	tigerbeetle/tigerbeetle	https://github.com/tigerbeetle/tigerbeetle.git	build.zig.zon	0.17.9
+erlang	processone/ejabberd	https://github.com/processone/ejabberd.git	rebar.lock	26.07
+clojure	ring-clojure/ring	https://github.com/ring-clojure/ring.git	ring middleware, project.clj	1.15.5
+julia	JuliaWeb/HTTP.jl	https://github.com/JuliaWeb/HTTP.jl.git	Project.toml	v2.6.4
+lua	luvit/luvit	https://github.com/luvit/luvit.git	rockspec	2.18.1
+nim	treeform/pixie	https://github.com/treeform/pixie.git	nimble	6.1.0
+nix	nix-community/nixvim	https://github.com/nix-community/nixvim.git	flake.lock	@default
+ocaml	ocsigen/lwt	https://github.com/ocsigen/lwt.git	opam	6.1.2
+perl	perl5-dbi/dbi	https://github.com/perl5-dbi/dbi.git	no lockfile	1.651
+r	tidyverse/ggplot2	https://github.com/tidyverse/ggplot2.git	DESCRIPTION	v4.0.3
+java	square/retrofit	https://github.com/square/retrofit.git	maven	3.0.0
+javascript	axios/axios	https://github.com/axios/axios.git	package-lock	v1.19.0
+python	scrapy/scrapy	https://github.com/scrapy/scrapy.git	setuptools	2.17.0
+go	etcd-io/etcd	https://github.com/etcd-io/etcd.git	multi-module	v3.7.1
+dotnet	jellyfin/jellyfin	https://github.com/jellyfin/jellyfin.git	csproj	v10.11.11
+rust	tokio-rs/tokio	https://github.com/tokio-rs/tokio.git	cargo-workspace	tokio-1.53.1
+cpp	redis/redis	https://github.com/redis/redis.git	makefile	8.10.0
+ruby	rspec/rspec-core	https://github.com/rspec/rspec-core.git	gemspec-nolock	v3.13.2
+kotlin	coil-kt/coil	https://github.com/coil-kt/coil.git	gradle	3.5.0
+php	filamentphp/filament	https://github.com/filamentphp/filament.git	composer	v5.7.6
+docker	mcr.microsoft.com/dotnet/aspnet:8.0	mcr.microsoft.com/dotnet/aspnet:8.0	container	@default
+polyglot	PostHog/posthog	https://github.com/PostHog/posthog.git	python + ts	1.43.1
+swift	apple/swift-collections	https://github.com/apple/swift-collections.git	spm	1.6.0
+dart	flutter/gallery	https://github.com/flutter/gallery.git	pubspec.lock	v2.10.2
+elixir	beam-telemetry/telemetry	https://github.com/beam-telemetry/telemetry.git	mix-nolock	v1.4.2
+other	ziglang/zig	https://github.com/ziglang/zig.git	zig-unsupported	0.15.2
+scala	typelevel/cats	https://github.com/typelevel/cats.git	sbt	v2.13.0
+terraform	terraform-google-modules/terraform-google-kubernetes-engine	https://github.com/terraform-google-modules/terraform-google-kubernetes-engine.git	hcl	v44.3.0
+haskell	snoyberg/conduit	https://github.com/snoyberg/conduit.git	stack + cabal	conduit-1.3.5
+zig	zigtools/zls	https://github.com/zigtools/zls.git	build.zig.zon	0.16.0
+erlang	rabbitmq/rabbitmq-server	https://github.com/rabbitmq/rabbitmq-server.git	rebar/erlang.mk monorepo	v4.3.4
+julia	SciML/DifferentialEquations.jl	https://github.com/SciML/DifferentialEquations.jl.git	Project.toml	v8.0.1
+lua	nvim-lua/kickstart.nvim	https://github.com/nvim-lua/kickstart.nvim.git	no manifest at all	@default
+nim	zedeus/nitter	https://github.com/zedeus/nitter.git	nimble app	@default
+clojure	seancorfield/next-jdbc	https://github.com/seancorfield/next-jdbc.git	deps.edn	v1.3.1118
+nix	numtide/devshell	https://github.com/numtide/devshell.git	flake.lock	@default
+ocaml	reasonml/reason	https://github.com/reasonml/reason.git	dune/opam	3.18.0
+perl	plack/Plack	https://github.com/plack/Plack.git	cpanfile	1.0054
+r	tidyverse/tidyr	https://github.com/tidyverse/tidyr.git	DESCRIPTION	v1.3.2
+javascript	lodash/lodash	https://github.com/lodash/lodash.git	npm	4.18.1
+python	numpy/numpy	https://github.com/numpy/numpy.git	meson	v2.5.2
+go	traefik/traefik	https://github.com/traefik/traefik.git	gomod	v3.7.10
+java	square/okhttp	https://github.com/square/okhttp.git	gradle-kts	1.3.0
+dotnet	PowerShell/PowerShell	https://github.com/PowerShell/PowerShell.git	csproj	v7.6.4
+rust	serde-rs/serde	https://github.com/serde-rs/serde.git	cargo-nolock	v1.0.229
+cpp	nginx/nginx	https://github.com/nginx/nginx.git	autotools	release-1.31.3
+ruby	puma/puma	https://github.com/puma/puma.git	gemfile	v8.0.2
+php	bcit-ci/CodeIgniter	https://github.com/bcit-ci/CodeIgniter.git	legacy-nolock	3.1.13
+docker	docker.io/library/eclipse-temurin:21-jdk	docker.io/library/eclipse-temurin:21-jdk	jdk image	@default
+polyglot	airbytehq/airbyte	https://github.com/airbytehq/airbyte.git	java + python + ts	v2.0.0
+kotlin	detekt/detekt	https://github.com/detekt/detekt.git	gradle	v1.23.8
+swift	apple/swift-log	https://github.com/apple/swift-log.git	spm	1.15.0
+dart	Baseflow/flutter_cached_network_image	https://github.com/Baseflow/flutter_cached_network_image.git	pubspec	v3.4.1
+elixir	elixir-plug/plug	https://github.com/elixir-plug/plug.git	mix.lock	v1.20.3
+other	ocaml/ocaml	https://github.com/ocaml/ocaml.git	opam-unsupported	5.5.0
+terraform	gruntwork-io/terragrunt	https://github.com/gruntwork-io/terragrunt.git	go + terraform	v1.1.2
+haskell	yesodweb/yesod	https://github.com/yesodweb/yesod.git	stack monorepo	yesod-1.6.2.1
+zig	zigzap/zap	https://github.com/zigzap/zap.git	build.zig.zon, http	v0.11.0
+scala	apache/pekko	https://github.com/apache/pekko.git	sbt	v1.6.0
+javascript	webpack/webpack	https://github.com/webpack/webpack.git	yarn	v5.109.2
+python	pandas-dev/pandas	https://github.com/pandas-dev/pandas.git	meson	v3.0.5
+go	cli/cli	https://github.com/cli/cli.git	gomod	v2.97.0
+dotnet	bitwarden/server	https://github.com/bitwarden/server.git	csproj	v2026.7.2
+rust	clap-rs/clap	https://github.com/clap-rs/clap.git	cargo	v4.6.6
+cpp	electron/electron	https://github.com/electron/electron.git	gn+yarn	v43.3.0
+ruby	sinatra/sinatra	https://github.com/sinatra/sinatra.git	gemfile	v4.2.1
+clojure	technomancy/leiningen	https://github.com/technomancy/leiningen.git	project.clj	2.13.0
+php	laravel/laravel	https://github.com/laravel/laravel.git	composer.lock	v13.8.0
+docker	docker.io/library/golang:1.24	docker.io/library/golang:1.24	toolchain image	@default
+polyglot	apache/arrow	https://github.com/apache/arrow.git	many languages in one tree	@default
+swift	ReactiveX/RxSwift	https://github.com/ReactiveX/RxSwift.git	spm	6.10.2
+dart	fluttercommunity/plus_plugins	https://github.com/fluttercommunity/plus_plugins.git	pubspec-monorepo	2.0.2
+elixir	livebook-dev/livebook	https://github.com/livebook-dev/livebook.git	mix+npm	v0.19.9
+other	erlang/otp	https://github.com/erlang/otp.git	rebar-unsupported	OTP-29.0.5
+java	netty/netty	https://github.com/netty/netty.git	maven	netty-4.2.17.Final
+terraform	hashicorp/terraform-provider-aws	https://github.com/hashicorp/terraform-provider-aws.git	go provider, huge	v6.58.0
+javascript	vitejs/vite	https://github.com/vitejs/vite.git	pnpm	v8.2.1
+python	scikit-learn/scikit-learn	https://github.com/scikit-learn/scikit-learn.git	meson	1.9.0
+go	spf13/cobra	https://github.com/spf13/cobra.git	small-gomod	v1.10.2
+dotnet	dotnet/maui	https://github.com/dotnet/maui.git	csproj	10.0.90
+rust	alacritty/alacritty	https://github.com/alacritty/alacritty.git	cargo	v0.17.0
+cpp	conan-io/conan-center-index	https://github.com/conan-io/conan-center-index.git	conanfiles	@default
+kotlin	google/ksp	https://github.com/google/ksp.git	gradle	2.3.11
+ruby	mastodon/mastodon	https://github.com/mastodon/mastodon.git	gemfile+yarn	v4.6.5
+php	php-fig/log	https://github.com/php-fig/log.git	composer-nolock	3.0.2
+docker	docker.io/library/httpd:2.4	docker.io/library/httpd:2.4	official image	@default
+polyglot	apache/druid	https://github.com/apache/druid.git	java + js	druid-37.0.0
+swift	onevcat/Kingfisher	https://github.com/onevcat/Kingfisher.git	spm	8.11.0
+dart	dart-lang/shelf	https://github.com/dart-lang/shelf.git	pubspec	shelf-v1.4.2
+elixir	thoughtbot/ex_machina	https://github.com/thoughtbot/ex_machina.git	mix.lock	v2.8.2
+scala	http4s/http4s	https://github.com/http4s/http4s.git	sbt	v0.23.36
+other	EbookFoundation/free-programming-books	https://github.com/EbookFoundation/free-programming-books.git	top-100, no manifest	@default
+terraform	hashicorp/terraform-provider-azurerm	https://github.com/hashicorp/terraform-provider-azurerm.git	go provider	v5.0.1
+javascript	babel/babel	https://github.com/babel/babel.git	yarn-monorepo	v8.0.4
+python	huggingface/transformers	https://github.com/huggingface/transformers.git	setuptools	v5.15.0
+go	rclone/rclone	https://github.com/rclone/rclone.git	gomod	v1.75.0
+dotnet	App-vNext/Polly	https://github.com/App-vNext/Polly.git	csproj	8.7.0
+rust	starship/starship	https://github.com/starship/starship.git	cargo	v1.26.0
+java	apache/dubbo	https://github.com/apache/dubbo.git	maven	dubbo-3.3.6
+cpp	microsoft/vcpkg	https://github.com/microsoft/vcpkg.git	vcpkg-ports	2026.07.29
+ruby	heartcombo/devise	https://github.com/heartcombo/devise.git	gemfile	v5.0.4
+php	doctrine/orm	https://github.com/doctrine/orm.git	composer	3.6.8
+docker	docker.io/library/mariadb:11	docker.io/library/mariadb:11	official image	@default
+polyglot	backstage/backstage	https://github.com/backstage/backstage.git	ts monorepo, plugins	v1.53.1
+swift	apple/swift-argument-parser	https://github.com/apple/swift-argument-parser.git	spm	1.8.2
+dart	cfug/dio	https://github.com/cfug/dio.git	pubspec	dio_v5.11.0
+kotlin	ktorio/ktor	https://github.com/ktorio/ktor.git	gradle	3.5.2
+elixir	ash-project/ash	https://github.com/ash-project/ash.git	mix.lock	v3.31.2
+other	ohmyzsh/ohmyzsh	https://github.com/ohmyzsh/ohmyzsh.git	top-100, shell, no manifest	@default
+terraform	kubernetes-sigs/cluster-api	https://github.com/kubernetes-sigs/cluster-api.git	go, manifests	v1.13.4
+javascript	eslint/eslint	https://github.com/eslint/eslint.git	npm	v10.8.1
+python	python-poetry/poetry	https://github.com/python-poetry/poetry.git	poetry.lock	2.4.1
+go	minio/minio	https://github.com/minio/minio.git	gomod	RELEASE.2025-10-15T17-29-55Z
+dotnet	quartznet/quartznet	https://github.com/quartznet/quartznet.git	csproj	v3.19.1
+scala	scala/scala3	https://github.com/scala/scala3.git	sbt, compiler	3.8.4
+rust	helix-editor/helix	https://github.com/helix-editor/helix.git	cargo	25.07.1
+cpp	catchorg/Catch2	https://github.com/catchorg/Catch2.git	cmake	v3.15.3
+ruby	Shopify/liquid	https://github.com/Shopify/liquid.git	gemspec	v5.13.0
+php	slimphp/Slim	https://github.com/slimphp/Slim.git	composer	4.15.2
+docker	docker.io/library/memcached:1.6-alpine	docker.io/library/memcached:1.6-alpine	tiny alpine	@default
+polyglot	elastic/kibana	https://github.com/elastic/kibana.git	ts monorepo, huge	v9.5.0
+swift	Moya/Moya	https://github.com/Moya/Moya.git	SwiftPM + Podfile	15.0.3
+java	alibaba/nacos	https://github.com/alibaba/nacos.git	maven	3.2.3
+dart	firebase/flutterfire	https://github.com/firebase/flutterfire.git	monorepo	@default
+elixir	beam-community/bamboo	https://github.com/beam-community/bamboo.git	mix.lock	v2.5.0
+other	sindresorhus/awesome	https://github.com/sindresorhus/awesome.git	top-100, markdown only	@default
+javascript	prettier/prettier	https://github.com/prettier/prettier.git	yarn	3.9.6
+python	pypa/pip	https://github.com/pypa/pip.git	setuptools	26.2.1
+go	jesseduffield/lazygit	https://github.com/jesseduffield/lazygit.git	gomod	v0.64.0
+dotnet	MassTransit/MassTransit	https://github.com/MassTransit/MassTransit.git	csproj	v8.5.10
+kotlin	mockk/mockk	https://github.com/mockk/mockk.git	gradle	v1.14.11
+rust	rustdesk/rustdesk	https://github.com/rustdesk/rustdesk.git	cargo+flutter	1.4.9
+cpp	gabime/spdlog	https://github.com/gabime/spdlog.git	cmake	v1.17.0
+ruby	rubygems/rubygems	https://github.com/rubygems/rubygems.git	gemfile	v4.0.18
+php	yiisoft/yii2	https://github.com/yiisoft/yii2.git	composer	2.0.55
+docker	docker.io/library/nginx:stable	docker.io/library/nginx:stable	official image	@default
+polyglot	getsentry/sentry	https://github.com/getsentry/sentry.git	python + ts	26.7.2
+swift	SDWebImage/SDWebImage	https://github.com/SDWebImage/SDWebImage.git	CocoaPods and SwiftPM	5.21.7
+scala	typelevel/fs2	https://github.com/typelevel/fs2.git	sbt	v3.13.0
+dart	flame-engine/flame	https://github.com/flame-engine/flame.git	melos monorepo	v1.38.0
+elixir	elixir-nx/bumblebee	https://github.com/elixir-nx/bumblebee.git	mix.lock, ML	v0.7.1
+other	torvalds/linux	https://github.com/torvalds/linux.git	top-100, kbuild, no package manifest	v7.1
+javascript	jestjs/jest	https://github.com/jestjs/jest.git	yarn-monorepo	v30.4.2
+python	ansible/ansible	https://github.com/ansible/ansible.git	setuptools	v2.21.2
+go	containerd/containerd	https://github.com/containerd/containerd.git	gomod	v2.3.3
+dotnet	dotnet/roslyn	https://github.com/dotnet/roslyn.git	csproj-huge	v11.0.100
+java	jenkinsci/jenkins	https://github.com/jenkinsci/jenkins.git	maven	jenkins-2.576
+rust	tauri-apps/tauri	https://github.com/tauri-apps/tauri.git	cargo+js	tauri-v2.11.5
+cpp	abseil/abseil-cpp	https://github.com/abseil/abseil-cpp.git	bazel+cmake	20260526.0
+ruby	ruby-grape/grape	https://github.com/ruby-grape/grape.git	gemspec	v3.3.5
+php	Intervention/image	https://github.com/Intervention/image.git	composer	4.2.1
+docker	docker.io/library/node:22-alpine	docker.io/library/node:22-alpine	alpine, musl	@default
+polyglot	grpc/grpc-java	https://github.com/grpc/grpc-java.git	gradle	v1.83.1
+swift	airbnb/lottie-ios	https://github.com/airbnb/lottie-ios.git	SwiftPM + Podfile	4.6.1
+kotlin	sqldelight/sqldelight	https://github.com/sqldelight/sqldelight.git	gradle	2.3.2
+dart	flutter/samples	https://github.com/flutter/samples.git	official samples, many pubspecs	@default
+javascript	microsoft/TypeScript	https://github.com/microsoft/TypeScript.git	npm	v6.0.3
+python	home-assistant/core	https://github.com/home-assistant/core.git	requirements.txt	2026.8.1
+go	istio/istio	https://github.com/istio/istio.git	gomod	1.30.3
+dotnet	FluentValidation/FluentValidation	https://github.com/FluentValidation/FluentValidation.git	csproj	12.1.1
+rust	SeaQL/sea-orm	https://github.com/SeaQL/sea-orm.git	cargo	2.0.1
+cpp	facebook/folly	https://github.com/facebook/folly.git	cmake	v2026.08.03.00
+java	apache/flink	https://github.com/apache/flink.git	maven-huge	release-2.3.0
+ruby	activeadmin/activeadmin	https://github.com/activeadmin/activeadmin.git	gemfile	v3.5.2
+php	spatie/laravel-permission	https://github.com/spatie/laravel-permission.git	composer	8.3.0
+docker	docker.io/library/postgres:17	docker.io/library/postgres:17	official image	@default
+polyglot	hasura/graphql-engine	https://github.com/hasura/graphql-engine.git	haskell + ts	v2.50.0
+swift	groue/GRDB.swift	https://github.com/groue/GRDB.swift.git	SwiftPM	v7.11.1
+dart	invertase/react-native-firebase	https://github.com/invertase/react-native-firebase.git	js + dart mix	v26.1.0
+javascript	socketio/socket.io	https://github.com/socketio/socket.io.git	npm-monorepo	socket.io@4.8.3
+java	apache/camel	https://github.com/apache/camel.git	maven-huge	camel-4.22.0
+python	celery/celery	https://github.com/celery/celery.git	requirements-dir	v5.6.3
+go	influxdata/telegraf	https://github.com/influxdata/telegraf.git	gomod	v1.39.2
+dotnet	dotnet/machinelearning	https://github.com/dotnet/machinelearning.git	csproj	v5.0.0
+rust	rayon-rs/rayon	https://github.com/rayon-rs/rayon.git	cargo-nolock	v1.12.0
+cpp	ClickHouse/ClickHouse	https://github.com/ClickHouse/ClickHouse.git	cmake, very large	54011
+ruby	rack/rack	https://github.com/rack/rack.git	gemspec-nolock	v3.2.6
+php	PHPMailer/PHPMailer	https://github.com/PHPMailer/PHPMailer.git	composer	v7.1.1
+java	junit-team/junit5	https://github.com/junit-team/junit-framework.git	gradle-kts	@default
+docker	docker.io/library/python:3.13-slim	docker.io/library/python:3.13-slim	python image	@default
+polyglot	microsoft/vscode	https://github.com/microsoft/vscode.git	ts + native, very large	v14
+swift	kean/Nuke	https://github.com/kean/Nuke.git	SwiftPM	13.1.0
+javascript	chartjs/Chart.js	https://github.com/chartjs/Chart.js.git	npm	v4.5.1
+python	sqlalchemy/sqlalchemy	https://github.com/sqlalchemy/sqlalchemy.git	setuptools	rel_2_0_51
+go	caddyserver/caddy	https://github.com/caddyserver/caddy.git	gomod	v2.11.4
+dotnet	restsharp/RestSharp	https://github.com/restsharp/RestSharp.git	csproj	114.0.0
+java	mockito/mockito	https://github.com/mockito/mockito.git	gradle	v5.23.0
+rust	sharkdp/hyperfine	https://github.com/sharkdp/hyperfine.git	cargo	v1.20.0
+cpp	Genymobile/scrcpy	https://github.com/Genymobile/scrcpy.git	top-100, meson	v4.1
+ruby	capistrano/capistrano	https://github.com/capistrano/capistrano.git	gemspec	v3.20.1
+php	briannesbitt/Carbon	https://github.com/briannesbitt/Carbon.git	composer	3.13.2
+docker	docker.io/library/redis:7-alpine	docker.io/library/redis:7-alpine	alpine	@default
+polyglot	opensearch-project/OpenSearch	https://github.com/opensearch-project/OpenSearch.git	java + others	3.8.0
+swift	swiftlang/swift-package-manager	https://github.com/swiftlang/swift-package-manager.git	SwiftPM itself	0.6.0
+java	ReactiveX/RxJava	https://github.com/ReactiveX/RxJava.git	gradle	v3.1.12
+javascript	d3/d3	https://github.com/d3/d3.git	yarn	v7.9.0
+python	locustio/locust	https://github.com/locustio/locust.git	poetry	2.46.3
+go	syncthing/syncthing	https://github.com/syncthing/syncthing.git	gomod	v2.1.3
+dotnet	2dust/v2rayN	https://github.com/2dust/v2rayN.git	top-100, csproj	7.24.6
+rust	meilisearch/meilisearch	https://github.com/meilisearch/meilisearch.git	workspace	v1.53.0
+cpp	duckdb/duckdb	https://github.com/duckdb/duckdb.git	cmake, vendored	v1.5.5
+ruby	thoughtbot/factory_bot	https://github.com/thoughtbot/factory_bot.git	gemspec	v6.6.0
+java	iluwatar/java-design-patterns	https://github.com/iluwatar/java-design-patterns.git	maven	1.25.0
+php	WordPress/WordPress	https://github.com/WordPress/WordPress.git	no composer.lock	7.0.3
+docker	docker.io/library/ruby:3.3-slim	docker.io/library/ruby:3.3-slim	ruby image	@default
+polyglot	pytorch/pytorch	https://github.com/pytorch/pytorch.git	cpp + python	v2.13.0
+javascript	mrdoob/three.js	https://github.com/mrdoob/three.js.git	npm	@default
+python	apache/airflow	https://github.com/apache/airflow.git	hatch-monorepo	3.3.0
+go	junegunn/fzf	https://github.com/junegunn/fzf.git	gomod	v0.74.2
+dotnet	AvaloniaUI/Avalonia	https://github.com/AvaloniaUI/Avalonia.git	UI framework monorepo	12.1.1
+java	OpenAPITools/openapi-generator	https://github.com/OpenAPITools/openapi-generator.git	maven	v7.24.0
+rust	rust-lang/cargo	https://github.com/rust-lang/cargo.git	Cargo.lock	0.98.0
+cpp	envoyproxy/envoy	https://github.com/envoyproxy/envoy.git	bazel	v1.39.0
+ruby	sass/sassc-ruby	https://github.com/sass/sassc-ruby.git	gemspec	v2.4.0
+php	bagisto/bagisto	https://github.com/bagisto/bagisto.git	laravel app	v2.4.9
+docker	docker.io/library/rust:1-slim	docker.io/library/rust:1-slim	toolchain image	@default
+polyglot	temporalio/temporal	https://github.com/temporalio/temporal.git	go + java	v1.31.2
+javascript	tailwindlabs/tailwindcss	https://github.com/tailwindlabs/tailwindcss.git	pnpm	v4.3.3
+java	apache/hadoop	https://github.com/apache/hadoop.git	maven, enormous	rel/release-3.5.0
+python	streamlit/streamlit	https://github.com/streamlit/streamlit.git	polyglot	1.61.1
+go	argoproj/argo-cd	https://github.com/argoproj/argo-cd.git	go + ui	v3.5.0
+dotnet	OrchardCMS/OrchardCore	https://github.com/OrchardCMS/OrchardCore.git	modular monorepo	v3.0.1
+rust	rust-lang/rust-analyzer	https://github.com/rust-lang/rust-analyzer.git	workspace, large	@default
+cpp	ggml-org/llama.cpp	https://github.com/ggml-org/llama.cpp.git	top-100, cmake	@default
+ruby	chatwoot/chatwoot	https://github.com/chatwoot/chatwoot.git	rails + vue	v4.16.2
+php	magento/magento2	https://github.com/magento/magento2.git	composer, enormous	2.4.9
+java	apache/pulsar	https://github.com/apache/pulsar.git	maven	v4.2.4
+docker	docker.io/library/wordpress:php8.3	docker.io/library/wordpress:php8.3	php image	@default
+polyglot	tensorflow/tensorflow	https://github.com/tensorflow/tensorflow.git	cpp + python + bazel	v2.21.0
+javascript	storybookjs/storybook	https://github.com/storybookjs/storybook.git	yarn-monorepo	v10.5.7
+python	Textualize/rich	https://github.com/Textualize/rich.git	poetry.lock	v15.0.0
+go	cockroachdb/cockroach	https://github.com/cockroachdb/cockroach.git	go + bazel, huge	v26.2.5
+dotnet	SixLabors/ImageSharp	https://github.com/SixLabors/ImageSharp.git	library	v4.0.0
+rust	seanmonstar/reqwest	https://github.com/seanmonstar/reqwest.git	Cargo.lock	v0.13.4
+java	apache/tomcat	https://github.com/apache/tomcat.git	ant + maven	11.0.24
+cpp	godotengine/godot	https://github.com/godotengine/godot.git	scons, no manifest	4.7.1-stable
+ruby	gitlabhq/gitlabhq	https://github.com/gitlabhq/gitlabhq.git	very large polyglot	v19.2.1
+php	pestphp/pest	https://github.com/pestphp/pest.git	composer.lock	v5.0.4
+docker	gcr.io/distroless/static-debian12:latest	gcr.io/distroless/static-debian12:latest	distroless, near-empty	@default
+javascript	remix-run/react-router	https://github.com/remix-run/react-router.git	pnpm	react-router@8.3.0
+python	tiangolo/sqlmodel	https://github.com/fastapi/sqlmodel.git	pdm	0.0.39
+go	golang/go	https://github.com/golang/go.git	top-100, the toolchain itself	@default
+java	apache/zookeeper	https://github.com/apache/zookeeper.git	maven	release-3.9.5
+dotnet	dotnet/orleans	https://github.com/dotnet/orleans.git	framework monorepo	v10.2.2
+rust	surrealdb/surrealdb	https://github.com/surrealdb/surrealdb.git	workspace	v3.2.0
+cpp	grpc/grpc	https://github.com/grpc/grpc.git	bazel + cmake, polyglot	v1.83.0
+ruby	ruby/ruby	https://github.com/ruby/ruby.git	the interpreter	v4.0.6
+php	thephpleague/flysystem	https://github.com/thephpleague/flysystem.git	composer monorepo	3.35.2
+javascript	strapi/strapi	https://github.com/strapi/strapi.git	yarn-monorepo	v5.51.2
+python	mlflow/mlflow	https://github.com/mlflow/mlflow.git	polyglot	v3.15.1
+java	debezium/debezium	https://github.com/debezium/debezium.git	maven	v3.6.1.Final
+go	goreleaser/goreleaser	https://github.com/goreleaser/goreleaser.git	go	v2.17.1
+dotnet	microsoft/PowerToys	https://github.com/microsoft/PowerToys.git	top-100, csproj + C++	v0.101.2211.0
+rust	vectordotdev/vector	https://github.com/vectordotdev/vector.git	large workspace	v0.57.0
+cpp	libgit2/libgit2	https://github.com/libgit2/libgit2.git	cmake	v1.9.6
+ruby	solidusio/solidus	https://github.com/solidusio/solidus.git	monorepo gems	v4.7.0
+javascript	Chalarangelo/30-seconds-of-code	https://github.com/Chalarangelo/30-seconds-of-code.git	top-100, npm	v14.0.0
+python	apache/superset-py	https://github.com/getsentry/sentry.git	python-monorepo	26.7.2
+java	google/dagger	https://github.com/google/dagger.git	bazel + maven	dagger-2.60.1
+go	grpc/grpc-go	https://github.com/grpc/grpc-go.git	go.sum	v1.83.0
+dotnet	ppy/osu	https://github.com/ppy/osu.git	large app, csproj	2026.730.0
+rust	zed-industries/zed	https://github.com/zed-industries/zed.git	very large workspace	v1.14.2
+cpp	microsoft/terminal	https://github.com/microsoft/terminal.git	vcpkg.json + msbuild	1904.29002
+javascript	TanStack/query	https://github.com/TanStack/query.git	pnpm monorepo	v5.90.3
+python	AUTOMATIC1111/stable-diffusion-webui	https://github.com/AUTOMATIC1111/stable-diffusion-webui.git	top-100, requirements.txt	v1.10.1
+go	ollama/ollama	https://github.com/ollama/ollama.git	go + cpp	v0.32.7
+java	google/gson	https://github.com/google/gson.git	maven	gson-2.4
+dotnet	reactiveui/ReactiveUI	https://github.com/reactiveui/ReactiveUI.git	monorepo	24.1.0
+javascript	anthropics/claude-code	https://github.com/anthropics/claude-code.git	top-100, npm	v2.1.226
+python	Comfy-Org/ComfyUI	https://github.com/Comfy-Org/ComfyUI.git	top-100, requirements.txt	v0.31.1
+javascript	clash-verge-rev/clash-verge-rev	https://github.com/clash-verge-rev/clash-verge-rev.git	top-100, TS + Rust	v2.5.2
+python	Significant-Gravitas/AutoGPT	https://github.com/Significant-Gravitas/AutoGPT.git	top-100, poetry monorepo	v0.6.44
+javascript	elysiajs/elysia	https://github.com/elysiajs/elysia.git	bun.lock	1.4.29
+python	Textualize/textual	https://github.com/Textualize/textual.git	poetry	v8.2.8
+java	keycloak/keycloak	https://github.com/keycloak/keycloak.git	maven	26.7.1
+javascript	excalidraw/excalidraw	https://github.com/excalidraw/excalidraw.git	yarn workspace	v0.18.1
+python	TheAlgorithms/Python	https://github.com/TheAlgorithms/Python.git	top-100, requirements.txt	@default
+javascript	firecrawl/firecrawl	https://github.com/firecrawl/firecrawl.git	top-100, pnpm monorepo	v2.11.193
+python	dbt-labs/dbt-core	https://github.com/dbt-labs/dbt-core.git	monorepo	v1.12.0
+javascript	freeCodeCamp/freeCodeCamp	https://github.com/freeCodeCamp/freeCodeCamp.git	top-100, large pnpm monorepo	@default
+python	fastapi/sqlmodel	https://github.com/fastapi/sqlmodel.git	poetry	0.0.39
+javascript	honojs/hono	https://github.com/honojs/hono.git	bun/npm	v4.13.1
+java	quarkusio/quarkus	https://github.com/quarkusio/quarkus.git	maven monorepo	3.38.1
+python	github/spec-kit	https://github.com/github/spec-kit.git	top-100, pyproject	v0.16.1
+javascript	iptv-org/iptv	https://github.com/iptv-org/iptv.git	top-100, npm on a data repo	@default
+python	langchain-ai/langchain	https://github.com/langchain-ai/langchain.git	monorepo of poetry projects	v0.1.16
+javascript	langgenius/dify	https://github.com/langgenius/dify.git	top-100, TS + Python	1.16.1
+python	langflow-ai/langflow	https://github.com/langflow-ai/langflow.git	top-100, uv/poetry	v1.11.3
+javascript	nodejs/node	https://github.com/nodejs/node.git	cpp + js, no lockfile	v26.7.0
+python	microsoft/markitdown	https://github.com/microsoft/markitdown.git	top-100, pyproject	v0.1.7
+javascript	nrwl/nx	https://github.com/nrwl/nx.git	pnpm monorepo	23.1.1
+python	open-webui/open-webui	https://github.com/open-webui/open-webui.git	top-100, python + svelte	v0.11.0
+javascript	nuxt/nuxt	https://github.com/nuxt/nuxt.git	pnpm monorepo	v4.5.2
+python	openai/openai-python	https://github.com/openai/openai-python.git	pep621	v2.53.0
+javascript	prisma/prisma	https://github.com/prisma/prisma.git	pnpm monorepo + rust	7.9.1
+python	pdm-project/pdm	https://github.com/pdm-project/pdm.git	pdm.lock	2.28.0
+javascript	react/react-native	https://github.com/react/react-native.git	top-100, huge JS+native monorepo	v0.86.2
+python	pola-rs/polars	https://github.com/pola-rs/polars.git	rust + python	@default
+javascript	shadcn-ui/ui	https://github.com/shadcn-ui/ui.git	top-100, pnpm monorepo	@default
+python	ray-project/ray	https://github.com/ray-project/ray.git	python + cpp + java	ray-2.56.1
+javascript	trekhleb/javascript-algorithms	https://github.com/trekhleb/javascript-algorithms.git	top-100, npm, few deps	@default
+python	scipy/scipy	https://github.com/scipy/scipy.git	meson, native deps	v1.18.0
+javascript	trpc/trpc	https://github.com/trpc/trpc.git	pnpm monorepo	v11.18.0
+python	vllm-project/vllm	https://github.com/vllm-project/vllm.git	large, native	v0.27.0
+javascript	twbs/bootstrap	https://github.com/twbs/bootstrap.git	top-100, npm	v5.3.8
+python	yt-dlp/yt-dlp	https://github.com/yt-dlp/yt-dlp.git	top-100, pyproject	2026.07.04
+javascript	typeorm/typeorm	https://github.com/typeorm/typeorm.git	npm	1.1.0
+python	ytdl-org/youtube-dl	https://github.com/ytdl-org/youtube-dl.git	top-100, setup.py	2021.12.17
+javascript	vercel/turborepo	https://github.com/vercel/turborepo.git	pnpm workspace + rust	v2.10.9
+javascript	vuejs/vue	https://github.com/vuejs/vue.git	top-100, Vue 2, npm	v2.7.16
+javascript	withastro/astro	https://github.com/withastro/astro.git	pnpm monorepo	astro@7.2.0

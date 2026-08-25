@@ -1,0 +1,1 @@
+{"ecosystem": "julia", "slug": "JuliaWeb/HTTP.jl", "note": "Project.toml", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v2.6.4", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 4, "discovered": [], "target_lockfile": null, "sbom": {}}

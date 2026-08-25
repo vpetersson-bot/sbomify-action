@@ -1,0 +1,1 @@
+{"ecosystem": "cpp", "slug": "catchorg/Catch2", "note": "cmake", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v3.15.3", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 10, "repo_mb": 12, "discovered": [], "target_lockfile": null, "sbom": {}}

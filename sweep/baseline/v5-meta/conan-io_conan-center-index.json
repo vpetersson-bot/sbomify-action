@@ -1,0 +1,1 @@
+{"ecosystem": "cpp", "slug": "conan-io/conan-center-index", "note": "conanfiles", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "@default", "released": false, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 9, "repo_mb": 100, "discovered": [], "target_lockfile": null, "sbom": {}}

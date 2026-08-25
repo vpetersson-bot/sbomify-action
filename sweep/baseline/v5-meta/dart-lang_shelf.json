@@ -1,0 +1,1 @@
+{"ecosystem": "dart", "slug": "dart-lang/shelf", "note": "pubspec", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "shelf-v1.4.2", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 5, "repo_mb": 2, "discovered": [], "target_lockfile": null, "sbom": {}}

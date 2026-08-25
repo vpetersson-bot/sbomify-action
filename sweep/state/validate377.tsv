@@ -1,0 +1,15 @@
+PHPMailer/PHPMailer	composer.json	v7.1.1
+Seldaek/monolog	composer.json	3.10.0
+bcit-ci/CodeIgniter	composer.json	3.1.13
+eslint/eslint	package.json	v10.8.1
+expressjs/express	package.json	v5.2.1
+flutter/samples	web_embedding/ng-flutter/package.json	
+godotengine/godot	pyproject.toml	4.7.1-stable
+libgit2/libgit2	package.json	v1.9.6
+php-fig/log	composer.json	3.0.2
+pypa/pip	pyproject.toml	26.2.1
+rabbitmq/rabbitmq-server	selenium/package.json	v4.3.4
+ray-project/ray	pyproject.toml	ray-2.56.1
+reasonml/reason	package.json	3.18.0
+scikit-learn/scikit-learn	pyproject.toml	1.9.0
+symfony/symfony	composer.json	v8.1.4

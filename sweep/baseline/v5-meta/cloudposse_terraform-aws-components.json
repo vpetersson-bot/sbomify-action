@@ -1,0 +1,1 @@
+{"ecosystem": "terraform", "slug": "cloudposse/terraform-aws-components", "note": "hcl", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "1.536.0", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 6, "repo_mb": 42, "discovered": [], "target_lockfile": null, "sbom": {}}

@@ -1,0 +1,1 @@
+{"ecosystem": "cpp", "slug": "openssl/openssl", "note": "perl-build", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "openssl-4.0.1", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 17, "repo_mb": 199, "discovered": [], "target_lockfile": null, "sbom": {}}

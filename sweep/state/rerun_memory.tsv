@@ -1,0 +1,5 @@
+java	spring-projects/spring-boot	https://github.com/spring-projects/spring-boot.git	gradle	v4.1.0
+kotlin	coil-kt/coil	https://github.com/coil-kt/coil.git	gradle	3.5.0
+dart	cfug/dio	https://github.com/cfug/dio.git	pubspec	dio_v5.11.0
+kotlin	ktorio/ktor	https://github.com/ktorio/ktor.git	gradle	3.5.2
+dart	flutter/samples	https://github.com/flutter/samples.git	official samples, many pubspecs	@default

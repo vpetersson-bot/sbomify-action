@@ -1,0 +1,14 @@
+# Records to discard and re-run before any analysis.
+#
+# At ~09:47:55 I removed /home/ubuntu/sbomify-eval/v6/work.* to clear leaked
+# root-owned clones, without excluding the two projects that were in flight.
+# Their bind-mounted repo vanished mid-run, so whatever they record is a
+# false failure caused by the harness, not by the image under test.
+#
+#   airbytehq_airbyte   started 09:13:55, ~34 min into its run
+#   dart-lang_http      started 09:47:52, 3s before the delete
+#
+# Deleting these records and re-running the orchestrator (which resumes on
+# missing records) is the fix.
+airbytehq_airbyte
+dart-lang_http

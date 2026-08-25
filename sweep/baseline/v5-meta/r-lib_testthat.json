@@ -1,0 +1,1 @@
+{"ecosystem": "r", "slug": "r-lib/testthat", "note": "DESCRIPTION", "image": "sbomify-action:master-890c2eb", "kind": "repo", "ref": "v3.3.2", "released": true, "error": "no_lockfile_discovered", "strict_rc": null, "fallback_rc": null, "used_fallback": false, "duration_s": 7, "repo_mb": 5, "discovered": [], "target_lockfile": null, "sbom": {}}
