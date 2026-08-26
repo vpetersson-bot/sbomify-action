@@ -10,8 +10,9 @@ a platform that had never been swept. Results in `results/arm64-meta/`.
 across the 49 projects whose input was a real lock file — `requirements.txt`,
 `uv.lock`, `go.sum`, `mix.lock`, `yarn.lock`, `pnpm-lock.yaml`.
 
-**Zero confirmed arm64-specific defects.** Twenty-nine candidates were flagged
-and all twenty-nine dissolved on inspection.
+**One confirmed arm64-specific defect**, found only after the confounds were
+removed — see the correction below. Twenty-eight of the twenty-nine flagged
+candidates dissolved on inspection; the twenty-ninth was real.
 
 ## What the candidates actually were
 
@@ -22,6 +23,26 @@ and all twenty-nine dissolved on inspection.
 | 5 Gradle projects | the harness's `--memory=2g` OOM-killing the Gradle daemon |
 | 9 `Package.swift` | the **correct** refusal, with working remediation advice |
 | Alamofire, RxSwift | the amd64 *baseline* was wrong — fastlane `Gemfile.lock` |
+
+## Correction: there is one arm64 defect
+
+This document first said "zero confirmed arm64-specific defects". That was
+wrong, and the way it was wrong is worth keeping.
+
+`ktorio/ktor` fails on aarch64 with `Unknown host target: linux aarch64`, and
+produces 1100 components on amd64 with a correct `pkg:maven/io.ktor/ktor@3.5.2`
+root — a baseline that passes the trustworthiness filter. It is a genuine
+architecture-specific failure, filed as
+[#387](https://github.com/sbomify/sbomify-action/issues/387).
+
+It was invisible in the first pass because ktor was one of the projects the
+sweep's own concurrency had rate-limited. Removing a confound does not only
+retract false findings; it also *reveals* true ones that the noise was hiding.
+The "zero defects" conclusion was drawn while 22 projects were still
+unmeasured, and stating it that confidently was the error — not the arithmetic.
+
+The nine projects that remained empty after the low-concurrency re-run each
+had a distinct, identifiable cause. None was noise.
 
 ## Real defects found
 
@@ -40,8 +61,20 @@ came from reading logs by hand.
   `ReactiveX/RxJava`, `google/ksp`.
 - [#384](https://github.com/sbomify/sbomify-action/issues/384) — exit 0 and a
   schema-valid SBOM with zero components, from a real lock file.
-  `OpenAPITools/openapi-generator`. Worse than crashing: an empty SBOM does not
-  read as "generation failed", it reads as "this project has no dependencies".
+  `OpenAPITools/openapi-generator`, and `yesodweb/yesod` via `stack.yaml.lock`
+  — two ecosystems, so not a JavaScript quirk. Worse than crashing: an empty
+  SBOM does not read as "generation failed", it reads as "this project has no
+  dependencies".
+- [#387](https://github.com/sbomify/sbomify-action/issues/387) — Kotlin
+  Multiplatform cannot be scanned on aarch64. The one architecture-specific
+  finding. Originates in ktor's own KMP build, so arguably upstream's, but the
+  user cannot tell that from the output and arm64 runners are now normal.
+- [#388](https://github.com/sbomify/sbomify-action/issues/388) — a single
+  Android module fails the whole Gradle build, because the image ships no
+  Android SDK. `grpc/grpc-java` is mostly plain JVM and none of it is scanned
+  because of `:grpc-cronet`. `fmtlib/fmt` reached the same failure for a
+  second reason worth separating: it is a **C++** project whose selected input
+  was `support/build.gradle`, i.e. its tooling rather than what it ships.
 
 ## The result that matters more than the arm64 answer
 
@@ -67,11 +100,24 @@ The lesson is not "be careful". It is that a harness artifact and a product
 defect are *indistinguishable in the results*, so any finding must first be
 attacked as a harness bug and only believed once that fails.
 
+## The rate-limited re-run
+
+Done, at 2 workers instead of 6. Of the 44 projects that hit a 429, only 22
+were also empty — the rest were slowed, not blocked. Re-running those 22
+recovered **13**, including quarkus (2189 components), elasticsearch (1984),
+keycloak (914) and debezium (799). 429s fell from 22 projects to 3.
+
+So those empty results were the sweep throttling itself, not the product. The
+nine that stayed empty are triaged in the table above.
+
 ## Not done
 
-The 44 rate-limited projects were not re-run. Doing it properly needs low
-concurrency or a local Maven mirror, and would take hours. Until then the JVM
-picture on arm64 is unmeasured — not bad, unmeasured.
+`COMPONENT_NAME` was passed throughout, so **this sweep cannot see naming
+defects**. That needs its own pass.
+
+`http4s/http4s` is untriaged: an sbt launcher `NoSuchElementException: key not
+found: (1,0)`. Not filed, because I could not tell whether it is ours or
+sbt's, and a guess would be worse than an admission.
 
 `COMPONENT_NAME` was passed throughout, so **this sweep cannot see naming
 defects**. That needs its own pass.
