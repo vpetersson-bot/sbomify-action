@@ -58,7 +58,24 @@ repo=$work/repo
 cleanup() { rm -rf "$work" 2>/dev/null || sudo -n rm -rf "$work"; }
 trap cleanup EXIT
 
-url="https://github.com/$slug.git"
+# Explicit :443 so a global insteadOf rewrite cannot match. A machine with
+#   url.git@github.com:.insteadOf = https://github.com/
+# in its global config silently turns every clone into SSH, and a box that
+# cannot reach github.com:22 then loses repositories wholesale -- 127 of 500
+# on the first amd64 run, recorded as "clone failed" and skipped by triage as
+# though never asked about.
+#
+# insteadOf does literal prefix matching, so "https://github.com:443/" simply
+# does not match "https://github.com/" and the rewrite never fires. Preferred
+# over `-c url...insteadOf=`, which does NOT work: insteadOf is multi-valued,
+# so -c appends an empty entry and leaves the original rewrite in force. That
+# wrong fix appeared to work only because SSH intermittently succeeds, and
+# still lost 36 repositories.
+#
+# Also preferred over overriding HOME or GIT_CONFIG_GLOBAL: this changes only
+# the URL we ask for, and touches nothing about the user's git configuration.
+url="https://github.com:443/$slug.git"
+
 if [ "$ref" = "@default" ]; then
   git clone --depth 1 --quiet "$url" "$repo" >>"$log" 2>&1
 else

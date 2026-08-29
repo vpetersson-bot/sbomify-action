@@ -71,19 +71,35 @@ def baseline_is_trustworthy(rec, run):
     return True
 
 
-def baseline_components(slug):
-    """Best trustworthy component count v5 recorded, or None if none is."""
+def baseline_components(slug, target):
+    """What v5 got **from the same input**, or None if it never tried it.
+
+    Matching the target is the whole point, and omitting it invalidated the
+    entire regression list once already. v5 often ran several inputs per
+    project; taking the best of any of them and comparing it against the one
+    input replayed here compares different questions. hasura/graphql-engine
+    was the giveaway -- 424 components in v5 from `cabal.project.freeze` (a
+    Haskell filesystem scan) against 0 here from `yarn.lock`. Twelve of the
+    thirteen "regressions" were that mistake; the thirteenth was a real
+    failure already explained elsewhere.
+
+    Returns None rather than 0 when v5 never scanned this input, so "we have
+    no comparison" stays distinguishable from "it produced nothing".
+    """
     f = BASE / (slug.replace("/", "_") + ".json")
     if not f.exists() or not f.stat().st_size:
         return None
     rec = json.loads(f.read_text())
     runs = rec.get("runs") or ([rec] if rec.get("strict_rc") is not None else [])
-    best = 0
-    for run in runs:
+    matched = [r for r in runs if (r.get("target_lockfile") or "") == (target or "")]
+    if not matched:
+        return None
+    best = None
+    for run in matched:
         if not baseline_is_trustworthy(rec, run):
             continue
         s = run.get("sbom") or {}
-        best = max(best, s.get("components") or 0)
+        best = max(best or 0, s.get("components") or 0)
     return best
 
 
@@ -124,7 +140,7 @@ for f in sorted(ARM.glob("*.json")):
         except OSError:
             pass
     starved = rec.get("killed") or daemon_died
-    was = baseline_components(slug)
+    was = baseline_components(slug, rec.get("target_lockfile"))
     if was and was > 0 and got == 0 and not starved:
         arch_only.append((slug, rec.get("target_lockfile"), was))
     elif starved and got == 0:
@@ -143,7 +159,7 @@ if crashes:
     for exc, n in Counter(c[1].split(":")[0] for c in crashes).most_common(10):
         print(f"      {exc[:60]:60s} {n}")
 
-print(f"\n=== WORKED ON amd64, EMPTY ON arm64 ({len(arch_only)}) -- architecture defects")
+print(f"\n=== PRODUCED COMPONENTS BEFORE, EMPTY NOW, SAME INPUT ({len(arch_only)})")
 for slug, target, was in sorted(arch_only, key=lambda x: -x[2])[:40]:
     print(f"   {slug:38s} {str(target)[:34]:34s} was {was}")
 

@@ -1,0 +1,478 @@
+2dust/v2rayN	7.24.6	v2rayN/v2rayN.sln	dotnet
+AUTOMATIC1111/stable-diffusion-webui	v1.10.1	requirements.txt	python
+Alamofire/Alamofire	5.12.0	Package.swift	swift
+App-vNext/Polly	8.7.0	src/Polly.Core/Polly.Core.csproj	dotnet
+AutoMapper/AutoMapper	v16.2.0	src/AutoMapper.DI.Tests/AutoMapper.DI.Tests.csproj	dotnet
+AvaloniaUI/Avalonia	12.1.1	nukebuild/_build.csproj	dotnet
+Baseflow/flutter_cached_network_image	v3.4.1	cached_network_image/example/android/build.gradle	dart
+BurntSushi/ripgrep	15.2.0	Cargo.lock	rust
+Chalarangelo/30-seconds-of-code	v14.0.0	package-lock.json	javascript
+ClickHouse/ClickHouse	54011		cpp
+Comfy-Org/ComfyUI	v0.31.1	requirements.txt	python
+EbookFoundation/free-programming-books	@default		other
+FluentValidation/FluentValidation	12.1.1	FluentValidation.sln	dotnet
+FluxML/Flux.jl	v0.16.11	examples/resnet_tinyimagenet/pytorch/pyproject.toml	julia
+Genymobile/scrcpy	v4.1	build.gradle	cpp
+GoogleCloudPlatform/terraform-google-network	v18.1.2	test/integration/go.sum	terraform
+Homebrew/brew	6.0.15	Library/Homebrew/Gemfile.lock	ruby
+InsertKoinIO/koin	4.2.2	projects/build.gradle.kts	kotlin
+Intervention/image	4.2.1	composer.json	php
+JamesNK/Newtonsoft.Json	13.0.4	Src/Newtonsoft.Json.FuzzTests/Newtonsoft.Json.FuzzTests.csproj	dotnet
+JetBrains/kotlin	v2.4.10	build.gradle.kts	kotlin
+JuliaData/DataFrames.jl	v1.8.2		julia
+JuliaGPU/CUDA.jl	v6.2.1		julia
+JuliaLang/Pkg.jl	v1.12.6		julia
+JuliaLang/julia	v1.12.6		other
+JuliaPlots/Plots.jl	v1.41.4		julia
+JuliaSymbolics/Symbolics.jl	v7.36.0		julia
+JuliaWeb/HTTP.jl	v2.6.4		julia
+Kong/kong	3.9.3	spec/fixtures/proxy_wasm_filters/Cargo.lock	lua
+Kotlin/kotlinx.coroutines	1.11.0	build.gradle.kts	kotlin
+Kotlin/kotlinx.serialization	v1.11.0	build.gradle.kts	kotlin
+LuaJIT/LuaJIT	@default		other
+LuaLS/lua-language-server	3.19.0		lua
+MassTransit/MassTransit	v8.5.10	MassTransit.sln	dotnet
+Mic92/sops-nix	@default	go.sum	nix
+Moya/Moya	15.0.3	Package.resolved	swift
+NixOS/nix	2.35.1		nix
+NixOS/nixpkgs	v208	pkgs/servers/dnschain/package.json	nix
+OpenAPITools/openapi-generator	v7.24.0	package-lock.json	java
+OrchardCMS/OrchardCore	v3.0.1	yarn.lock	dotnet
+PHPMailer/PHPMailer	v7.1.1	composer.json	php
+PMunch/futhark	v0.16.0		nim
+Perl/perl5	v5.45.1		other
+PostHog/posthog	1.43.1	requirements.txt	polyglot
+PostgREST/postgrest	v16.0	stack.yaml.lock	haskell
+PowerShell/PowerShell	v7.6.4	PowerShell.sln	dotnet
+ReactiveX/RxJava	v3.1.12	build.gradle	java
+ReactiveX/RxSwift	6.10.2	Package.swift	swift
+SDWebImage/SDWebImage	5.21.7	Package.swift	swift
+SciML/DifferentialEquations.jl	v8.0.1		julia
+SeaQL/sea-orm	2.0.1	Cargo.toml	rust
+Seldaek/monolog	3.10.0	composer.json	php
+Shopify/liquid	v5.13.0		ruby
+Significant-Gravitas/AutoGPT	v0.6.44	autogpt_platform/autogpt_libs/poetry.lock	python
+SixLabors/ImageSharp	v4.0.0	ImageSharp.sln	dotnet
+SwiftyJSON/SwiftyJSON	5.0.2	Package.swift	swift
+TanStack/query	v5.90.3	pnpm-lock.yaml	javascript
+Textualize/rich	v15.0.0	poetry.lock	python
+Textualize/textual	v8.2.8	uv.lock	python
+TheAlgorithms/Python	@default	uv.lock	python
+WordPress/WordPress	7.0.3	wp-includes/sodium_compat/composer.json	php
+abpframework/abp	10.6.0	templates/app-nolayers/angular/package.json	dotnet
+abseil/abseil-cpp	20260526.0		cpp
+absinthe-graphql/absinthe	v1.11.0	mix.lock	elixir
+activeadmin/activeadmin	v3.5.2	yarn.lock	ruby
+airbnb/lottie-ios	4.6.1	package.json	swift
+airbytehq/airbyte	v2.0.0	poetry.lock	polyglot
+akka/akka	v10.1.0	build.sbt	scala
+alacritty/alacritty	v0.17.0	Cargo.lock	rust
+alibaba/nacos	3.2.3	pom.xml	java
+androidx/androidx	@default	build.gradle	kotlin
+angular/angular	v22.1.1	pnpm-lock.yaml	javascript
+ansible/ansible	v2.21.2	requirements.txt	python
+anthropics/claude-code	v2.1.226		javascript
+apache/airflow	3.3.0	uv.lock	python
+apache/arrow	@default	python/pyproject.toml	polyglot
+apache/camel	camel-4.22.0	pom.xml	java
+apache/druid	druid-37.0.0	pom.xml	polyglot
+apache/dubbo	dubbo-3.3.6	pom.xml	java
+apache/flink	release-2.3.0	pom.xml	java
+apache/hadoop	rel/release-3.5.0	pom.xml	java
+apache/kafka	4.3.1	build.gradle	java
+apache/lucene	releases/lucene/10.5.0	build.gradle	java
+apache/pekko	v1.6.0	build.sbt	scala
+apache/pulsar	v4.2.4	pom.xml	java
+apache/spark	v4.2.0	pyproject.toml	scala
+apache/superset-py	26.7.2	uv.lock	python
+apache/superset	v2021.41.0	superset-frontend/package-lock.json	polyglot
+apache/tomcat	11.0.24	modules/cxf/pom.xml	java
+apache/zookeeper	release-3.9.5	pom.xml	java
+apple/swift-argument-parser	1.8.2	Package.swift	swift
+apple/swift-collections	1.6.0	Package.swift	swift
+apple/swift-log	1.15.0	Package.swift	swift
+apple/swift-nio	2.101.3	Package.swift	swift
+apple/swift-package-manager	0.6.0	Package.swift	swift
+appwrite/appwrite	1.9.6	package-lock.json	polyglot
+argoproj/argo-cd	v3.5.0	go.sum	go
+arrow-kt/arrow	2.2.3	build.gradle.kts	kotlin
+ash-project/ash	v3.31.2	mix.lock	elixir
+astral-sh/ruff	0.16.2	uv.lock	rust
+astral-sh/uv	0.12.3	uv.lock	rust
+axios/axios	v1.19.0	package-lock.json	javascript
+babashka/babashka	v1.13.219	deps.edn	clojure
+babel/babel	v8.0.4	yarn.lock	javascript
+backstage/backstage	v1.53.1	yarn.lock	polyglot
+bagisto/bagisto	v2.4.9	package.json	php
+bcit-ci/CodeIgniter	3.1.13	composer.json	php
+beam-community/bamboo	v2.5.0	mix.lock	elixir
+beam-telemetry/telemetry	v1.4.2	rebar.lock	elixir
+benoitc/hackney	4.7.2		erlang
+bitwarden/server	v2026.7.2	AppHost/AppHost.csproj	dotnet
+briannesbitt/Carbon	3.13.2	composer.json	php
+cachix/devenv	v2.2.1	Cargo.lock	nix
+caddyserver/caddy	v2.11.4	go.sum	go
+capistrano/capistrano	v3.20.1	docs/Gemfile.lock	ruby
+catchorg/Catch2	v3.15.3		cpp
+celery/celery	v5.6.3	pyproject.toml	python
+cfug/dio	dio_v5.11.0	example_flutter_app/android/build.gradle.kts	dart
+chartjs/Chart.js	v4.5.1	pnpm-lock.yaml	javascript
+chatwoot/chatwoot	v4.16.2	pnpm-lock.yaml	ruby
+clap-rs/clap	v4.6.6	Cargo.lock	rust
+clash-verge-rev/clash-verge-rev	v2.5.2	pnpm-lock.yaml	javascript
+cli/cli	v2.97.0	go.sum	go
+clj-kondo/clj-kondo	v2026.08.04	deps.edn	clojure
+clojure/clojure	clojure-1.12.5	pom.xml	clojure
+clojure/tools.deps	v0.31.1642	pom.xml	clojure
+cloudposse/terraform-aws-components	1.536.0		terraform
+cockroachdb/cockroach	v26.2.5	go.sum	go
+coil-kt/coil	3.5.0	build.gradle.kts	kotlin
+commercialhaskell/stack	v3.11.1	stack.yaml.lock	other
+composer/composer	2.10.2	composer.lock	php
+conan-io/conan-center-index	@default		cpp
+containerd/containerd	v2.3.3	go.sum	go
+crystal-lang/crystal	1.21.0		other
+curl/curl	curl-8_21_0	projects/Windows/tmpl/curl.sln	cpp
+d3/d3	v7.9.0	yarn.lock	javascript
+dart-lang/http	http-v1.5.0	pkgs/cronet_http/android/build.gradle	dart
+dart-lang/sdk	3.12.2		dart
+dart-lang/shelf	shelf-v1.4.2		dart
+daurnimator/lua-http	v0.4		lua
+dbt-labs/dbt-core	v1.12.0	requirements.txt	python
+debezium/debezium	v3.6.1.Final	pom.xml	java
+denoland/deno	v2.9.5	Cargo.lock	rust
+detekt/detekt	v1.23.8	build.gradle.kts	kotlin
+discourse/discourse	v2026.7.1	pnpm-lock.yaml	ruby
+disruptek/frosty	3.0.0		nim
+django/django	6.1	pyproject.toml	python
+doctrine/orm	3.6.8	composer.json	php
+dotnet/aspnetcore	v10.0.10	package-lock.json	dotnet
+dotnet/efcore	v11.0.100	src/EFCore.Abstractions/EFCore.Abstractions.csproj	dotnet
+dotnet/machinelearning	v5.0.0	Microsoft.ML.sln	dotnet
+dotnet/maui	10.0.90	Microsoft.Maui.sln	dotnet
+dotnet/orleans	v10.2.2	playground/ActivationSheddingToy/ActivationSheddingToy.csproj	dotnet
+dotnet/roslyn	v11.0.100	src/Deployment/RoslynDeployment.csproj	dotnet
+dotnet/runtime	v10.0.10	src/libraries/externals.csproj	dotnet
+duckdb/duckdb	v1.5.5		cpp
+elastic/elasticsearch	v9.5.0	build.gradle	java
+elastic/kibana	v9.5.0	yarn.lock	polyglot
+electron/electron	v43.3.0	yarn.lock	cpp
+elixir-ecto/ecto	v3.14.1	mix.lock	elixir
+elixir-lang/elixir	v1.20.3		elixir
+elixir-nx/bumblebee	v0.7.1	mix.lock	elixir
+elixir-nx/nx	v0.13.0	exla/mix.lock	elixir
+elixir-plug/plug	v1.20.3	mix.lock	elixir
+elysiajs/elysia	1.4.29	bun.lock	javascript
+emqx/emqx	6.2.2	scripts/sbom/requirements.txt	erlang
+encode/httpx	0.28.1	requirements.txt	python
+envoyproxy/envoy	v1.39.0	go.sum	cpp
+erlang/otp	OTP-29.0.5	lib/compiler/scripts/smoke-build/mix.lock	other
+erlang/rebar3	3.27.0	rebar.lock	erlang
+erlware/relx	v4.10.0	rebar.lock	erlang
+eslint/eslint	v10.8.1	package.json	javascript
+etcd-io/etcd	v3.7.1	go.sum	go
+excalidraw/excalidraw	v0.18.1	yarn.lock	javascript
+expressjs/express	v5.2.1	package.json	javascript
+facebook/folly	v2026.08.03.00		cpp
+facebook/react	v19.2.8	yarn.lock	javascript
+fastapi/fastapi	0.141.1	uv.lock	python
+fastapi/sqlmodel	0.0.39	uv.lock	python
+fastlane/fastlane	2.237.0	Package.resolved	ruby
+felangel/bloc	bloc-v9.2.1	extensions/vscode/package-lock.json	dart
+filamentphp/filament	v5.7.6	package-lock.json	php
+firebase/flutterfire	@default	packages/firebase_data_connect/firebase_data_connect/example/package-lock.json	dart
+firecrawl/firecrawl	v2.11.193	apps/python-sdk/requirements.txt	javascript
+flame-engine/flame	v1.38.0	doc/_sphinx/requirements.txt	dart
+flutter/flutter	3.44.9	pubspec.lock	dart
+flutter/gallery	v2.10.2	pubspec.lock	dart
+flutter/packages	@default	packages/espresso/android/build.gradle.kts	dart
+flutter/samples	@default	web_embedding/ng-flutter/package.json	dart
+fluttercommunity/plus_plugins	2.0.2	website/package-lock.json	dart
+fmtlib/fmt	12.2.0	support/build.gradle	cpp
+folke/lazy.nvim	v11.17.5		lua
+freeCodeCamp/freeCodeCamp	@default	pnpm-lock.yaml	javascript
+gabime/spdlog	v1.17.0		cpp
+getsentry/sentry	26.7.2	uv.lock	polyglot
+ggml-org/llama.cpp	@default	requirements.txt	cpp
+ghostty-org/ghostty	v1.3.1	macos/Ghostty.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved	zig
+gin-gonic/gin	v1.12.0	go.sum	go
+github/spec-kit	v0.16.1	pyproject.toml	python
+gitlabhq/gitlabhq	v19.2.1	Pipfile.lock	ruby
+go-gitea/gitea	v1.27.1	uv.lock	polyglot
+godotengine/godot	4.7.1-stable	pyproject.toml	cpp
+gohugoio/hugo	v0.164.0	go.sum	go
+golang/go	@default	src/go.sum	go
+google/dagger	dagger-2.60.1	buildSrc/build.gradle.kts	java
+google/googletest	v1.17.0		cpp
+google/gson	gson-2.4	codegen/pom.xml	java
+google/guava	v33.6.0	pom.xml	java
+google/ksp	2.3.11	build.gradle.kts	kotlin
+goreleaser/goreleaser	v2.17.1	go.sum	go
+grafana/grafana	v13.1.3	yarn.lock	go
+groue/GRDB.swift	v7.11.1	Package.swift	swift
+grpc/grpc-go	v1.83.0	go.sum	go
+grpc/grpc-java	v1.83.1	build.gradle	polyglot
+grpc/grpc	v1.83.0	requirements.txt	cpp
+gruntwork-io/terragrunt	v1.1.2	go.sum	terraform
+guzzle/guzzle	8.0.2	composer.json	php
+hashicorp/terraform-provider-aws	v6.58.0	go.sum	terraform
+hashicorp/terraform-provider-azurerm	v5.0.1	go.sum	terraform
+hashicorp/terraform	v1.15.8	go.sum	go
+hashicorp/vault	v2.0.4	go.sum	polyglot
+haskell-servant/servant	servant-0.20.3.0	stack.yaml.lock	haskell
+haskell/aeson	v2.3.1.0		haskell
+haskell/cabal	Cabal-v3.18.1.0	stack.yaml	other
+haskell/haskell-language-server	2.14.0.0	stack.yaml	haskell
+haskellari/postgresql-simple	v0.7.0.1		haskell
+hasura/graphql-engine	v2.50.0	yarn.lock	polyglot
+heartcombo/devise	v5.0.4	Gemfile.lock	ruby
+helix-editor/helix	25.07.1	Cargo.lock	rust
+hexops/mach	v0.5.0		zig
+home-assistant/core	2026.8.1	requirements.txt	python
+honojs/hono	v4.13.1	bun.lock	javascript
+houseabsolute/DateTime.pm	v1.66		perl
+http4s/http4s	v0.23.36	build.sbt	scala
+huggingface/transformers	v5.15.0	pyproject.toml	python
+iluwatar/java-design-patterns	1.25.0	pom.xml	java
+immich-app/immich	v3.1.0	pnpm-lock.yaml	polyglot
+inaka/elvis	5.0.4	rebar.lock	erlang
+influxdata/telegraf	v1.39.2	go.sum	go
+invertase/react-native-firebase	v26.1.0	yarn.lock	dart
+iptv-org/iptv	@default	package-lock.json	javascript
+istio/istio	1.30.3	go.sum	go
+janestreet/core	113.33.03		ocaml
+jekyll/jekyll	v4.4.1		ruby
+jellyfin/jellyfin	v10.11.11	Jellyfin.sln	dotnet
+jenkinsci/jenkins	jenkins-2.576	yarn.lock	java
+jesseduffield/lazygit	v0.64.0	go.sum	go
+jestjs/jest	v30.4.2	yarn.lock	javascript
+jgm/pandoc	3.10.1	stack.yaml	haskell
+junegunn/fzf	v0.74.2	go.sum	go
+junit-team/junit5	@default	build.gradle.kts	java
+karlseguin/http.zig	@default		zig
+kean/Nuke	13.1.0	Package.swift	swift
+keycloak/keycloak	26.7.1	pom.xml	java
+koalaman/shellcheck	v0.11.0	stack.yaml	haskell
+kristoff-it/zine	v0.13.0		zig
+ktorio/ktor	3.5.2	build.gradle.kts	kotlin
+kubernetes-sigs/cluster-api	v1.13.4	go.sum	terraform
+kubernetes/kubernetes	v1.36.3	go.sum	go
+langchain-ai/langchain	v0.1.16	poetry.lock	python
+langflow-ai/langflow	v1.11.3	uv.lock	python
+langgenius/dify	1.16.1	pnpm-lock.yaml	javascript
+laravel/framework	v13.24.0	composer.json	php
+laravel/laravel	v13.8.0	package.json	php
+libgit2/libgit2	v1.9.6	package.json	cpp
+libwww-perl/libwww-perl	v6.83		perl
+livebook-dev/livebook	v0.19.9	mix.lock	elixir
+localsend/localsend	v1.17.0	app/pubspec.lock	dart
+locustio/locust	2.46.3	uv.lock	python
+lodash/lodash	4.18.1	package-lock.json	javascript
+lunarmodules/busted	v2.3.0		lua
+lunarmodules/luasocket	v3.1.0	luasocket.sln	lua
+luvit/luvit	2.18.1		lua
+magento/magento2	2.4.9	composer.lock	php
+mastodon/mastodon	v4.6.5	yarn.lock	ruby
+meilisearch/meilisearch	v1.53.0	Cargo.lock	rust
+metabase/metabase	v1.52.2.5	yarn.lock	clojure
+metacpan/metacpan-web	v1.0.0		perl
+microsoft/PowerToys	v0.101.2211.0	src/common/Common.Search/Common.Search.csproj	dotnet
+microsoft/TypeScript	v6.0.3	package-lock.json	javascript
+microsoft/markitdown	v0.1.7	packages/markitdown-mcp/pyproject.toml	python
+microsoft/terminal	1904.29002	samples/ReadConsoleInputStream/ReadConsoleInputStreamDemo.sln	cpp
+microsoft/vcpkg	2026.07.29	scripts/azure-pipelines/owners-db/package-lock.json	cpp
+microsoft/vscode	v14	yarn.lock	polyglot
+minio/minio	RELEASE.2025-10-15T17-29-55Z	go.sum	go
+mirage/mirage	v4.11.2		ocaml
+mlflow/mlflow	v3.15.1	uv.lock	python
+moby/moby	v28.5.2	man/go.sum	go
+mockito/mockito	v5.23.0	build.gradle.kts	java
+mockk/mockk	v1.14.11	package-lock.json	kotlin
+mojolicious/mojo	v9.49		perl
+moose/Moose	2.4000		perl
+mrdoob/three.js	@default	package-lock.json	javascript
+n8n-io/n8n	n8n@2.34.4	pnpm-lock.yaml	polyglot
+natecraddock/ziglua	0.6.0		zig
+neovim/neovim	v0.12.4		other
+nestjs/nest	v11.1.29	package-lock.json	javascript
+netty/netty	netty-4.2.17.Final	pom.xml	java
+nextcloud/server	v34.0.2	package-lock.json	php
+nginx/nginx	release-1.31.3		cpp
+nim-lang/Nim	v2.2.10		nim
+nim-lang/nimble	v0.24.1	nimble-guide/requirements.txt	nim
+nimgl/nimgl	1.3.2		nim
+ninenines/cowboy	2.18.0		erlang
+nix-community/home-manager	@default		nix
+nix-community/naersk	@default	docparse/Cargo.lock	nix
+nix-community/nixvim	@default		nix
+nlohmann/json	v3.12.0	Package.swift	cpp
+nodejs/node	v26.7.0	pyproject.toml	javascript
+nrwl/nx	23.1.1	pnpm-lock.yaml	javascript
+numpy/numpy	v2.5.2	pyproject.toml	python
+numtide/devshell	@default		nix
+nuxt/nuxt	v4.5.2	pnpm-lock.yaml	javascript
+nvim-lua/kickstart.nvim	@default		lua
+oban-bg/oban	v2.23.1	mix.lock	elixir
+ocaml-batteries-team/batteries-included	release-09.11.1		ocaml
+ocaml-multicore/eio	v1.4		ocaml
+ocaml/dune	3.24.2	doc/requirements.txt	ocaml
+ocaml/ocaml	5.5.0		other
+ocaml/opam	2.5.2		ocaml
+ocsigen/lwt	6.1.2		ocaml
+ohmyzsh/ohmyzsh	@default	.github/workflows/dependencies/requirements.txt	other
+ollama/ollama	v0.32.7	go.sum	go
+onevcat/Kingfisher	8.11.0	Package.swift	swift
+open-webui/open-webui	v0.11.0	uv.lock	python
+openai/openai-python	v2.53.0	uv.lock	python
+opencv/opencv	5.0.0	docs_sphinx/requirements.txt	cpp
+openresty/lua-nginx-module	v0.10.31		perl
+opensearch-project/OpenSearch	3.8.0	build.gradle	polyglot
+openssl/openssl	openssl-4.0.1		cpp
+oven-sh/bun	bun-v1.3.14	bun.lock	zig
+pallets/flask	3.1.3	uv.lock	python
+pandas-dev/pandas	v3.0.5	pyproject.toml	python
+pdm-project/pdm	2.28.0	pyproject.toml	python
+perl5-dbi/dbi	1.651		perl
+pestphp/pest	v5.0.4	composer.json	php
+phoenixframework/phoenix	v1.8.9	package-lock.json	elixir
+php-fig/log	3.0.2	composer.json	php
+plack/Plack	1.0054		perl
+plausible/analytics	v3.2.1	mix.lock	elixir
+playframework/playframework	3.0.11	build.sbt	scala
+pointfreeco/swift-composable-architecture	1.26.1	Package.resolved	swift
+pola-rs/polars	@default	Cargo.lock	python
+ppy/osu	2026.730.0	osu.sln	dotnet
+prettier/prettier	3.9.6	yarn.lock	javascript
+prisma/prisma	7.9.1	pnpm-lock.yaml	javascript
+processone/ejabberd	26.07	package-lock.json	erlang
+prometheus/prometheus	v3.13.2	go.sum	go
+protocolbuffers/protobuf	v35.1	python/requirements.txt	cpp
+psf/black	26.5.1	pyproject.toml	python
+psf/requests	v2.34.2	pyproject.toml	python
+puma/puma	v8.0.2		ruby
+pydantic/pydantic	v2.13.4	uv.lock	python
+pypa/pip	26.2.1	pyproject.toml	python
+python-poetry/poetry	2.4.1	poetry.lock	python
+pytorch/pytorch	v2.13.0	requirements.txt	polyglot
+quarkusio/quarkus	3.38.1	pom.xml	java
+quartznet/quartznet	v3.19.1	src/Quartz.AspNetCore/Quartz.AspNetCore.csproj	dotnet
+r-lib/devtools	v2.5.2		r
+r-lib/httr2	v1.3.0		r
+r-lib/testthat	v3.3.2		r
+rabbitmq/rabbitmq-server	v4.3.4	selenium/package.json	erlang
+rack/rack	v3.2.6		ruby
+rails/rails	v8.1.3.1	yarn.lock	ruby
+ray-project/ray	ray-2.56.1	pyproject.toml	python
+rayon-rs/rayon	v1.12.0	Cargo.toml	rust
+rclone/rclone	v1.75.0	go.sum	go
+react/react-native	v0.86.2	yarn.lock	javascript
+reactiveui/ReactiveUI	24.1.0	src/ReactiveUI.AndroidX.Reactive/ReactiveUI.AndroidX.Reactive.csproj	dotnet
+realm/realm-swift	v20.0.5	Package.swift	swift
+reasonml/reason	3.18.0	package.json	ocaml
+redis/redis	8.10.0	.codespell/requirements.txt	cpp
+remix-run/react-router	react-router@8.3.0	pnpm-lock.yaml	javascript
+restsharp/RestSharp	114.0.0	gen/SourceGenerator/SourceGenerator.csproj	dotnet
+ring-clojure/ring	1.15.5	project.clj	clojure
+rrousselGit/riverpod	riverpod-v3.4.2	website/yarn.lock	dart
+rspec/rspec-core	v3.13.2		ruby
+rstudio/renv	v1.2.4		r
+rstudio/shiny	v1.14.0	package-lock.json	r
+rubocop/rubocop	v1.89.0		ruby
+ruby-grape/grape	v3.3.5		ruby
+ruby/ruby	v4.0.6	Cargo.lock	ruby
+rubygems/rubygems	v4.0.18	bundler/spec/realworld/fixtures/tapioca/Gemfile.lock	ruby
+rust-lang/cargo	0.98.0	Cargo.lock	rust
+rust-lang/rust-analyzer	@default	Cargo.lock	rust
+rust-lang/rust	1.97.1	yarn.lock	rust
+rustdesk/rustdesk	1.4.9	Cargo.lock	rust
+sass/sassc-ruby	v2.4.0		ruby
+scala/scala	v2.13.18	build.sbt	scala
+scala/scala3	3.8.4	build.sbt	scala
+scikit-learn/scikit-learn	1.9.0	pyproject.toml	python
+scipy/scipy	v1.18.0	pyproject.toml	python
+scrapy/scrapy	2.17.0	pyproject.toml	python
+seancorfield/next-jdbc	v1.3.1118	deps.edn	clojure
+seanmonstar/reqwest	v0.13.4	Cargo.toml	rust
+sebastianbergmann/phpunit	13.3.0	composer.lock	php
+serde-rs/serde	v1.0.229	Cargo.toml	rust
+serilog/serilog	v2234	Serilog.sln	dotnet
+shadcn-ui/ui	@default	pnpm-lock.yaml	javascript
+sharkdp/bat	v0.26.1	Cargo.lock	rust
+sharkdp/fd	v10.4.2	Cargo.lock	rust
+sharkdp/hyperfine	v1.20.0	Cargo.lock	rust
+sidekiq/sidekiq	v8.1.6		ruby
+sinatra/sinatra	v4.2.1		ruby
+sindresorhus/awesome	@default		other
+slimphp/Slim	4.15.2	composer.json	php
+snoyberg/conduit	conduit-1.3.5	stack.yaml.lock	haskell
+socketio/socket.io	socket.io@4.8.3	package-lock.json	javascript
+softwaremill/tapir	v1.13.31	build.sbt	scala
+solidusio/solidus	v4.7.0		ruby
+spatie/laravel-permission	8.3.0	composer.json	php
+spf13/cobra	v1.10.2	go.sum	go
+spring-projects/spring-boot	v4.1.0	build.gradle	java
+spring-projects/spring-framework	v7.0.8	build.gradle	java
+sqlalchemy/sqlalchemy	rel_2_0_51	pyproject.toml	python
+sqldelight/sqldelight	2.3.2	build.gradle	kotlin
+square/okhttp	1.3.0	pom.xml	java
+square/retrofit	3.0.0	build.gradle	java
+starship/starship	v1.26.0	Cargo.lock	rust
+status-im/nimbus-eth2	v26.7.0	docs/requirements.txt	nim
+storybookjs/storybook	v10.5.7	yarn.lock	javascript
+strapi/strapi	v5.51.2	yarn.lock	javascript
+streamlit/streamlit	1.61.1	uv.lock	python
+supabase/supabase	v1.26.08	pnpm-lock.yaml	polyglot
+surrealdb/surrealdb	v3.2.0	Cargo.lock	rust
+sveltejs/svelte	svelte@5.56.8	pnpm-lock.yaml	javascript
+swiftlang/swift-package-manager	0.6.0	Package.swift	swift
+symfony/symfony	v8.1.4	composer.json	php
+syncthing/syncthing	v2.1.3	go.sum	go
+tailwindlabs/tailwindcss	v4.3.3	pnpm-lock.yaml	javascript
+tauri-apps/tauri	tauri-v2.11.5	pnpm-lock.yaml	rust
+technomancy/leiningen	2.13.0	project.clj	clojure
+temporalio/temporal	v1.31.2	go.sum	polyglot
+tensorflow/tensorflow	v2.21.0	tensorflow/lite/java/demo/build.gradle	polyglot
+terraform-aws-modules/terraform-aws-eks	v21.24.2		terraform
+terraform-aws-modules/terraform-aws-rds	v7.2.1		terraform
+terraform-aws-modules/terraform-aws-s3-bucket	v5.15.4		terraform
+terraform-aws-modules/terraform-aws-security-group	v6.0.0		terraform
+terraform-aws-modules/terraform-aws-vpc	v6.6.1		terraform
+terraform-google-modules/terraform-google-kubernetes-engine	v44.3.0	test/integration/go.sum	terraform
+thephpleague/flysystem	3.35.2	composer.json	php
+thoughtbot/ex_machina	v2.8.2	mix.lock	elixir
+thoughtbot/factory_bot	v6.6.0	Gemfile.lock	ruby
+tiangolo/sqlmodel	0.0.39	uv.lock	python
+tidyverse/dplyr	v1.2.1		r
+tidyverse/ggplot2	v4.0.3		r
+tidyverse/tidyr	v1.3.2		r
+tigerbeetle/tigerbeetle	0.17.9	src/clients/python/pyproject.toml	zig
+tokio-rs/tokio	tokio-1.53.1	Cargo.toml	rust
+torvalds/linux	v7.1	Documentation/sphinx/requirements.txt	other
+traefik/traefik	v3.7.10	go.sum	go
+treeform/pixie	6.1.0		nim
+trekhleb/javascript-algorithms	@default	package-lock.json	javascript
+trpc/trpc	v11.18.0	pnpm-lock.yaml	javascript
+twbs/bootstrap	v5.3.8	package-lock.json	javascript
+typelevel/cats	v2.13.0	build.sbt	scala
+typelevel/fs2	v3.13.0	build.sbt	scala
+typeorm/typeorm	1.1.0	pnpm-lock.yaml	javascript
+vapor/vapor	4.122.0	Package.swift	swift
+vectordotdev/vector	v0.57.0	Cargo.lock	rust
+vercel/next.js	v16.3.0	pnpm-lock.yaml	javascript
+vercel/turborepo	v2.10.9	pnpm-lock.yaml	javascript
+vitejs/vite	v8.2.1	pnpm-lock.yaml	javascript
+vllm-project/vllm	v0.27.0	pyproject.toml	python
+vuejs/core	v3.5.41	pnpm-lock.yaml	javascript
+vuejs/vue	v2.7.16	pnpm-lock.yaml	javascript
+webpack/webpack	v5.109.2	yarn.lock	javascript
+withastro/astro	astro@7.2.0	pnpm-lock.yaml	javascript
+yesodweb/yesod	yesod-1.6.2.1	stack.yaml.lock	haskell
+yiisoft/yii2	2.0.55	package.json	php
+yt-dlp/yt-dlp	2026.07.04	uv.lock	python
+ytdl-org/youtube-dl	2021.12.17		python
+zed-industries/zed	v1.14.2	Cargo.lock	rust
+zedeus/nitter	@default	tests/poetry.lock	nim
+ziglang/zig	0.15.2		other
+zigtools/zls	0.16.0		zig
+zigzap/zap	v0.11.0		zig
+zio/zio	v2.1.26	build.sbt	scala

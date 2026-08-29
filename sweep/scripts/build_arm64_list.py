@@ -32,6 +32,16 @@ for f in sorted(BASELINE.glob("*.json")):
     slug = rec.get("slug")
     if not slug:
         continue
+    # The corpus contains container images as well as repositories. They have
+    # no git URL, so including them produced 13 guaranteed "clone failed"
+    # records that then vanished from triage as if they had never been asked
+    # about. Scanning an image is a different code path and needs its own run.
+    # `nginx:latest` and `postgres:17-alpine` carry no registry prefix, so a
+    # docker.io/ check alone missed them and they stayed in as guaranteed
+    # clone failures. A tag separator in the final path segment is the
+    # reliable tell -- no GitHub repository name contains a colon.
+    if rec.get("kind") in ("image", "docker") or slug.startswith("docker.io/") or ":" in slug.split("/")[-1]:
+        continue
     ref = refs.get(slug)
     if not ref:
         no_ref += 1
