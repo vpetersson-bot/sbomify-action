@@ -1,0 +1,16 @@
+name: 'Probe (container)'
+description: 'Reports what a Docker container action actually sees. Mirrors the real action.yml input/runs.env shape.'
+inputs:
+  component-purl:
+    description: 'Unset by the caller, exactly as in sboms.yml -- which passes COMPONENT_PURL via env: instead.'
+    required: false
+  bom-type:
+    description: 'Has a default, so runs.env always has something to write.'
+    required: false
+    default: 'sbom'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    COMPONENT_PURL: ${{ inputs['component-purl'] }}
+    BOM_TYPE: ${{ inputs['bom-type'] }}

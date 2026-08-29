@@ -1,0 +1,9 @@
+name: 'Probe (composite failure)'
+description: 'A composite action whose inner step exits non-zero, to check the failure actually propagates.'
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        echo "inner composite step is about to exit 1"
+        exit 1

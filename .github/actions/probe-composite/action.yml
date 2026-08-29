@@ -1,0 +1,53 @@
+name: 'Probe (composite)'
+description: 'Reports what a composite action sees, with the same input shape as the container probe.'
+inputs:
+  component-purl:
+    description: 'Unset by the caller, as in sboms.yml.'
+    required: false
+  bom-type:
+    description: 'Has a default.'
+    required: false
+    default: 'sbom'
+runs:
+  using: 'composite'
+  steps:
+    # Deliberately NO `env:` on this step. The question is what a composite
+    # step inherits from the caller unaided -- if the caller's env: does not
+    # reach here, every env-configured consumer breaks silently.
+    - name: Probe without threading anything
+      shell: bash
+      run: |
+        echo "########## COMPOSITE ACTION ##########"
+        echo "identity:        uid=$(id -u) gid=$(id -g) groups=$(id -G)"
+        echo "HOME:            [$HOME]"
+        echo "cwd:             $(pwd)"
+        echo "GITHUB_WORKSPACE:[$GITHUB_WORKSPACE]"
+        echo "workspace owner: $(stat -c '%u:%g %a' "$GITHUB_WORKSPACE" 2>/dev/null)"
+
+        echo "--- env inheritance (nothing threaded on this step) ---"
+        echo "COMPONENT_PURL:  [${COMPONENT_PURL-<unset>}]  <- caller env: only"
+        echo "BOM_TYPE:        [${BOM_TYPE-<unset>}]        <- caller env: only"
+        echo "PLAIN_ENV:       [${PLAIN_ENV-<unset>}]       <- caller env: only"
+        echo "INPUT_COMPONENT_PURL: [${INPUT_COMPONENT_PURL-<unset>}]"
+        echo "INPUT_BOM_TYPE:  [${INPUT_BOM_TYPE-<unset>}]"
+
+        echo "--- inputs context (the composite way) ---"
+        echo "inputs.component-purl: [${{ inputs['component-purl'] }}]"
+        echo "inputs.bom-type:       [${{ inputs['bom-type'] }}]"
+
+        echo "--- docker access, the thing a container action cannot have ---"
+        echo "docker on PATH:  $(command -v docker || echo no)"
+        if [ -S /var/run/docker.sock ]; then
+          echo "socket:          $(stat -c '%u:%g %a' /var/run/docker.sock)"
+          echo "socket gid:      $(stat -c '%g' /var/run/docker.sock)"
+          echo "socket writable: $([ -w /var/run/docker.sock ] && echo yes || echo NO)"
+          echo "docker ps:       $(docker ps >/dev/null 2>&1 && echo OK || echo FAILED)"
+        else
+          echo "socket:          ABSENT"
+        fi
+
+        echo "--- OIDC ---"
+        echo "ACTIONS_ID_TOKEN_REQUEST_URL set: $([ -n "$ACTIONS_ID_TOKEN_REQUEST_URL" ] && echo yes || echo no)"
+
+        echo "--- can we run the real image as ourselves? ---"
+        echo "would run: docker run --user $(id -u):$(id -g) --group-add $(stat -c '%g' /var/run/docker.sock 2>/dev/null)"

@@ -1,0 +1,57 @@
+---
+# Resolves the composite-vs-container unknowns empirically, on a real hosted
+# runner. Both probes declare the same inputs and are called the same way --
+# caller env:, no with: -- so any difference is the action type, not the call.
+name: Probe
+
+on:
+  push:
+    branches: [spike/composite-semantics]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  probe:
+    name: Container vs composite
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Runner-side facts, for comparison
+        run: |
+          echo "runner uid=$(id -u) gid=$(id -g) groups=$(id -G)"
+          echo "workspace: $GITHUB_WORKSPACE -> $(stat -c '%u:%g %a' "$GITHUB_WORKSPACE")"
+          echo "docker socket: $(stat -c '%u:%g %a' /var/run/docker.sock)"
+          echo "docker gid: $(stat -c '%g' /var/run/docker.sock)"
+          echo "docker group in /etc/group: $(getent group docker)"
+
+      # Configured entirely by env:, which is how sboms.yml drives the real
+      # action. component-purl and bom-type are ALSO declared as inputs and
+      # mapped through runs.env in the container probe -- that is the
+      # precedence collision worth measuring.
+      - name: Container action
+        uses: ./.github/actions/probe-container
+        env:
+          COMPONENT_PURL: from-caller-env
+          BOM_TYPE: from-caller-env
+          PLAIN_ENV: from-caller-env
+
+      - name: Composite action
+        uses: ./.github/actions/probe-composite
+        env:
+          COMPONENT_PURL: from-caller-env
+          BOM_TYPE: from-caller-env
+          PLAIN_ENV: from-caller-env
+
+      # Does a failing composite step actually fail the job? trivy-action#417
+      # reports continue-on-error behaving differently after their migration.
+      - name: Composite failure propagates
+        id: failprobe
+        continue-on-error: true
+        uses: ./.github/actions/probe-fail
+
+      - name: Report failure-propagation outcome
+        run: echo "composite failure outcome = ${{ steps.failprobe.outcome }} (expect 'failure')"
