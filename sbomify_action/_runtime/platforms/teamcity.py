@@ -39,7 +39,10 @@ below resolves on its first tier. The per-root (``vcsroot.<id>.url``,
 ``BUILD_VCS_NUMBER_<id>``) handling is a fallback for multi-root builds, where
 the bare forms are absent entirely -- it never executes for the common case.
 
-Set DISABLE_VCS_AUGMENTATION=true to disable VCS enrichment.
+``DISABLE_VCS_AUGMENTATION=true`` suppresses VCS enrichment, but nothing in
+this module reads it. The switch is not per-platform: it is enforced once, in
+``CIPlatformProvider``, so it applies wherever the action runs. ``vcs()`` here
+always reports what it finds -- a direct caller gets metadata regardless.
 """
 
 import logging

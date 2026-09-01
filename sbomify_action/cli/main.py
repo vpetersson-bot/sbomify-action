@@ -1256,7 +1256,7 @@ def path_expansion(path: str) -> str:
     elif relative_path.is_file():
         logger.info(f"Using input file '{relative_path}'.")
         return str(relative_path)
-    elif (workspace_relative_path := _first_existing(path)) is not None:
+    elif (workspace_relative_path := next((p for p in workspace_paths if p.is_file()), None)) is not None:
         logger.info(f"Using input file '{workspace_relative_path}'.")
         return str(workspace_relative_path)
     else:
@@ -3680,7 +3680,10 @@ def _parse_upload_destinations_callback(
     "--working-dir",
     envvar="WORKING_DIR",
     default=None,
-    help="Working directory (absolute, or relative to the CI platform's checkout root). [env: WORKING_DIR]",
+    help=(
+        "Working directory. Absolute, or relative -- to the checkout root on a platform that pins it "
+        "(GitHub Actions), otherwise to the current directory. [env: WORKING_DIR]"
+    ),
 )
 @click.option(
     "-v",
